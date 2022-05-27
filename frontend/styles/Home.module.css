@@ -1,0 +1,18 @@
+.container {
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.header{
+  width: 100%;
+  margin-top: 0;
+}
+.h{
+  font-size: 100px;
+  font-weight: bold;
+  width: 100vw;
+  height: 100vh - 72px;
+  padding-left: 42%;
+  padding-right: 42%;
+  margin-top: 15%;
+}
