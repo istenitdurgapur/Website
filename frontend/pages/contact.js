@@ -3,16 +3,14 @@ import Header from '../components/Header'
 import navigation from "../data"; 
 
 
-export default function Home() {
+export default function contact() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <Header items={navigation} navPosition="right" />
       </div>
-      <h1 className={styles.h}>ISTE</h1>
-      {/* <div className={styles.text}>
-        <p>hello</p>
-      </div> */}
+      <h1 className={styles.h}>Contact</h1>
+     
     </div>
   )
 }
