@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import navigation from "../data"; 
+import Footer from '../components/Footer';
 
 
 export default function Home() {
@@ -10,9 +11,8 @@ export default function Home() {
         <Header items={navigation} navPosition="right" />
       </div>
       <h1 className={styles.h}>ISTE</h1>
-      {/* <div className={styles.text}>
-        <p>hello</p>
-      </div> */}
+      <Footer />
+
     </div>
   )
 }
