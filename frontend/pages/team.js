@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import Image from "next/image";
-
-import styles from "../styles/Home.module.css";
-import Header from "../components/Header";
-import navigation from "../data";
+import styles from '../styles/Home.module.css'
+import Header from '../components/Header'
+import navigation from "../data"; 
+import Footer from '../components/Footer';
 
 function Team() {
   const [data, setData] = useState(null);
@@ -25,31 +24,25 @@ function Team() {
 
   if (isLoading) return <p>Loading...</p>;
   if (!data) return <p>No profile data</p>;
-=======
-import styles from '../styles/Home.module.css'
-import Header from '../components/Header'
-import navigation from "../data"; 
-import Footer from '../components/Footer';
->>>>>>> c196216441299cbbb96c6f28c648d1ef16492b99
+
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <Header items={navigation} navPosition="right" />
       </div>
-<<<<<<< HEAD
-      <div className="flex-col  justify-center items-center mt-8">
-        <p className="flex justify-center items-center  text-gray-600 dark:text-white text-2xl lg:text-5xl underline underline-offset-4 decoration-1 ">
+      <div className="flex-col  justify-center items-center mt-8 mb-10">
+        <p className="flex justify-center items-center  text-gray-600  text-2xl lg:text-5xl underline underline-offset-4 decoration-1 ">
         Meet  Our Team
         </p>
         <div className="flex flex-col sm:flex-row  justify-center items-center mt-8 w-full">
           {data.map(function (d, i) {
             return (
-              <div key={i} className="flex justify-center h-[400px] m-6 w-[250px] ">
-                <div className="bg-white dark:bg-gradient-to-tr from-slate-900 via-slate-800 to-slate-900 dark:border dark:border-gray-600 w-full transition-all duration-500 hover:scale-110 hover:shadow-lg rounded-2xl border-2">
+                <div key={i} className=" h-[400px]  w-[250px] bg-white  transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-slate-400 rounded-2xl border-2  hover:border-2 hover:border-pink-600 hover:border-r-indigo-500 hover:border-t-yellow-500 hover:border-l-indigo-500 m-6 group">
                   <Image
+                  className="rounded-t-2xl grayscale group-hover:grayscale-0 transition-all duration-500"
                     src={d.image}
-                    layout="fixed"
+                    layout="responsive"
                     height={290}
                     width={250}
                     objectFit="cover"
@@ -58,16 +51,16 @@ import Footer from '../components/Footer';
                   />
 
                   <div className="text-center">
-                    <p className="text-gray-900 dark:text-gray-100 text-xl flex justify-center font-medium mt-2 mb-1">
+                    <p className="text-gray-900  text-xl flex justify-center font-medium mt-2 mb-1">
                       {d.name}
                     </p>
-                    <p className="text-gray-900 dark:text-gray-100 text-sm flex justify-center font-medium">
+                    <p className="text-gray-900  text-sm flex justify-center font-medium">
                       {d.post}
                     </p>
                   </div>
                   <div className=" flex row space-x-5 justify-center mt-3">
                     <a href={"mailto:"+d.email}>
-                      <svg   className="w-4 h-4 text-yellow-500 hover:text-yellow-400 fill-current transition-all duration-300 hover:scale-125"
+                      <svg   className="w-4 h-4 text-yellow-500 hover:text-yellow-700 fill-current transition-all duration-500 group-hover:scale-150 group-hover:m-3 group-hover:animate-spin "
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
                       >
@@ -76,7 +69,7 @@ import Footer from '../components/Footer';
                     </a>
                     <a href={d.facebook}>
                       <svg
-                        className="w-4 h-4 text-blue-600 hover:text-blue-400 fill-current transition-all duration-300 hover:scale-125"
+                        className="w-4 h-4 text-blue-600 hover:text-blue-700 fill-current transition-all duration-500 group-hover:scale-150 group-hover:m-3 group-hover:animate-spin "
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                       >
@@ -85,7 +78,7 @@ import Footer from '../components/Footer';
                     </a>
                     <a href={d.instagram}>
                       <svg
-                        className="w-4 h-4 text-red-600 hover:text-red-400 fill-current transition-all duration-300 hover:scale-125"
+                        className="w-4 h-4 text-red-600 hover:text-red-700 fill-current transition-all duration-500 group-hover:scale-150 group-hover:m-3 group-hover:animate-spin "
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 16 16"
                       >
@@ -94,7 +87,7 @@ import Footer from '../components/Footer';
                     </a>
                     <a href={d.linkedin}>
                       <svg
-                        className="w-4 h-4 text-indigo-600 hover:text-indigo-400 fill-current transition-all duration-300 hover:scale-125"
+                        className="w-4 h-4 text-indigo-600 hover:text-indigo-700 fill-current transition-all duration-500 group-hover:scale-150 group-hover:m-3 group-hover:animate-spin "
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
                       >
@@ -103,15 +96,11 @@ import Footer from '../components/Footer';
                     </a>
                   </div>
                 </div>
-              </div>
             );
           })}
         </div>
       </div>
-=======
-      <h1 className={styles.h}>Team</h1>
       <Footer />
->>>>>>> c196216441299cbbb96c6f28c648d1ef16492b99
     </div>
   );
 }
