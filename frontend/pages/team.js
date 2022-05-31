@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -24,12 +25,19 @@ function Team() {
 
   if (isLoading) return <p>Loading...</p>;
   if (!data) return <p>No profile data</p>;
+=======
+import styles from '../styles/Home.module.css'
+import Header from '../components/Header'
+import navigation from "../data"; 
+import Footer from '../components/Footer';
+>>>>>>> c196216441299cbbb96c6f28c648d1ef16492b99
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <Header items={navigation} navPosition="right" />
       </div>
+<<<<<<< HEAD
       <div className="flex-col  justify-center items-center mt-8">
         <p className="flex justify-center items-center  text-gray-600 dark:text-white text-2xl lg:text-5xl underline underline-offset-4 decoration-1 ">
         Meet  Our Team
@@ -100,6 +108,10 @@ function Team() {
           })}
         </div>
       </div>
+=======
+      <h1 className={styles.h}>Team</h1>
+      <Footer />
+>>>>>>> c196216441299cbbb96c6f28c648d1ef16492b99
     </div>
   );
 }
