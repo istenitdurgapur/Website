@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
+
+
 function TeamCard({ title, year }) {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(false);
@@ -18,10 +20,7 @@ function TeamCard({ title, year }) {
         }
 
         let FilteredArray = data.filter(filterByYear);
-
-        console.log("Filtered Array\n", FilteredArray);
         setData(FilteredArray);
-        console.log(data);
 
         setLoading(false);
       });
@@ -34,7 +33,7 @@ function TeamCard({ title, year }) {
       <p className="flex justify-center items-center font-serif  text-gray-600  text-2xl lg:text-3xl underline underline-offset-4 decoration-1 ">
         {title}
       </p>
-      <div className="flex   md:flex-row flex-wrap   justify-center items-center mt-8 w-full">
+      <div className="flex flex-wrap   justify-center items-center mt-8 w-full md:p-20">
         {data.map(function (d, i) {
           return (
             <div
@@ -42,7 +41,7 @@ function TeamCard({ title, year }) {
               className=" h-[400px]  w-[250px] bg-white  transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-slate-400 rounded-2xl border-2 m-6 group"
             >
               <Image
-                className="rounded-t-2xl lg:grayscale lg:group-hover:grayscale-0 transition-all duration-500 "
+                className="rounded-t-2xl"
                 src={d.image}
                 layout="responsive"
                 height={290}
@@ -50,6 +49,8 @@ function TeamCard({ title, year }) {
                 objectFit="cover"
                 objectPosition="top"
                 alt="image"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
               />
 
               <div className="text-center">
@@ -107,3 +108,25 @@ function TeamCard({ title, year }) {
 }
 
 export default TeamCard;
+
+
+
+// blur effect of images before loading code
+const shimmer = (w, h) => `
+<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="g">
+      <stop stop-color="#333" offset="20%" />
+      <stop stop-color="#222" offset="50%" />
+      <stop stop-color="#333" offset="70%" />
+    </linearGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#333" />
+  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+</svg>`
+
+const toBase64 = (str) =>
+  typeof window === 'undefined'
+    ? Buffer.from(str).toString('base64')
+    : window.btoa(str)

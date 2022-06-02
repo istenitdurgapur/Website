@@ -48,7 +48,7 @@ function Footer() {
           </div>
           <div className={s.footerCol}>
             <h4>follow us</h4>
-            <div className="flex space-x-4">
+            <div className="flex  space-x-4 md:space-x-1 lg:space-x-4">
               <a
                 href="#"
                 className="p-2 rounded-full bg-gray-500 transition-all duration-300 hover:bg-white group"
