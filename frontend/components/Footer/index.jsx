@@ -8,7 +8,7 @@ function Footer() {
         <div className={s.row}>
           <div className={`${s.footerCol} ${s.footerCol1}`}>
             <h4>
-              ISTE STUDENTS' CHAPTER <br></br> NIT DURGAPUR
+              ISTE STUDENTS &#39; CHAPTER <br></br> NIT DURGAPUR
             </h4>
             <ul className={s.ul1}>
               <li>Made with 💖 by WEBD Team</li>

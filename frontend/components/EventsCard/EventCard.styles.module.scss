@@ -14,12 +14,13 @@ $radius: 0.2rem;
   &__img {
     width: 100%;
     height: 16rem;
-    object-fit: cover;
+    object-fit: fill;
   }
 
   &__body {
     margin: 1rem;
     flex-grow: 1;
+    height: auto;
   }
   &__title {
     line-height: 1.4rem;
