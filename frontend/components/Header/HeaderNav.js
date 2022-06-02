@@ -20,4 +20,6 @@ const HeaderNav = React.forwardRef(({ items, isMenuOpen }, ref) => {
   );
 });
 
+HeaderNav.displayName = 'HeaderNav';
+
 export default HeaderNav;

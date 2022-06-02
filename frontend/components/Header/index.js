@@ -59,7 +59,7 @@ const Header = ({ items, logo, navPosition }) => {
         gsap.set([navRef.current, itemsRefs], { clearProps: "all" });
       }
     }
-  }, [isSmallScreen]);
+  }, [menuTL , navItems , navPosition , isSmallScreen]);
 
   //Setup menuTL things to work on any screen size
   useEffect(() => {
@@ -78,12 +78,12 @@ const Header = ({ items, logo, navPosition }) => {
         )
         .reverse();
     }
-  }, []);
+  }, [menuTL , navItems , navPosition]);
 
   //Run menuTL base on Menu State
   useEffect(() => {
     menuTL.reversed(!isMenuOpen);
-  }, [isMenuOpen]);
+  }, [menuTL , isMenuOpen]);
 
   //onClick function to set state of menu
   const toggleNav = () => {
