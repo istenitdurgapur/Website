@@ -38,7 +38,7 @@ function Team() {
         <div className="flex flex-col sm:flex-row  justify-center items-center mt-8 w-full">
           {data.map(function (d, i) {
             return (
-                <div key={i} className=" h-[400px]  w-[250px] bg-white  transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-slate-400 rounded-2xl border-2  hover:border-2 hover:border-pink-600 hover:border-r-indigo-500 hover:border-t-yellow-500 hover:border-l-indigo-500 m-6 group">
+                <div key={i} className=" h-[400px]  w-[250px] bg-white  transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-slate-400 rounded-2xl border-2  hover:border-2 hover:border-t-pink-400 hover:border-r-indigo-400 hover:border-b-yellow-400 hover:border-l-indigo-400 m-6 group">
                   <Image
                   className="rounded-t-2xl grayscale group-hover:grayscale-0 transition-all duration-500 "
                     src={d.image}
@@ -60,7 +60,7 @@ function Team() {
                   </div>
                   <div className=" flex row space-x-5 justify-center mt-3">
                     <a href={"mailto:"+d.email}>
-                      <svg   className="w-4 h-4 text-yellow-500 hover:text-yellow-700 fill-current transition-all duration-500 group-hover:scale-150 group-hover:m-3 hover:-translate-y-1 "
+                      <svg   className="w-4 h-4 text-yellow-500 hover:text-yellow-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
                       >
@@ -69,7 +69,7 @@ function Team() {
                     </a>
                     <a href={d.facebook}>
                       <svg
-                        className="w-4 h-4 text-blue-600 hover:text-blue-700 fill-current transition-all duration-500 group-hover:scale-150 group-hover:m-3 hover:-translate-y-1 "
+                        className="w-4 h-4 text-blue-600 hover:text-blue-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                       >
@@ -78,7 +78,7 @@ function Team() {
                     </a>
                     <a href={d.instagram}>
                       <svg
-                        className="w-4 h-4 text-red-600 hover:text-red-700 fill-current transition-all duration-500 group-hover:scale-150 group-hover:m-3 hover:-translate-y-1 "
+                        className="w-4 h-4 text-red-600 hover:text-red-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 16 16"
                       >
@@ -87,7 +87,7 @@ function Team() {
                     </a>
                     <a href={d.linkedin}>
                       <svg
-                        className="w-4 h-4 text-indigo-600 hover:text-indigo-700 fill-current transition-all duration-500 group-hover:scale-150 group-hover:m-3 hover:-translate-y-1 "
+                        className="w-4 h-4 text-indigo-600 hover:text-indigo-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
                       >
