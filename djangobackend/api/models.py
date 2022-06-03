@@ -7,6 +7,7 @@ class Student(models.Model):
   email = models.EmailField(unique=True)
   phoneno=models.IntegerField(default=0)
   post = models.CharField(max_length=100)
+  order=models.SmallIntegerField(default=0)
   year = models.IntegerField(default=0)
   linkedin = models.CharField(max_length=100)
   facebook = models.CharField(max_length=100)

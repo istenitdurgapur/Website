@@ -20,6 +20,10 @@ function TeamCard({ title, year }) {
         }
 
         let FilteredArray = data.filter(filterByYear);
+        FilteredArray.sort((a, b) => {
+          return a.order - b.order;
+      });
+      
         setData(FilteredArray);
 
         setLoading(false);
