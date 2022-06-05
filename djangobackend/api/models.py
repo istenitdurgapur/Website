@@ -9,23 +9,34 @@ class Student(models.Model):
   post = models.CharField(max_length=100)
   order=models.SmallIntegerField(default=0)
   year = models.IntegerField(default=0)
-  linkedin = models.CharField(max_length=100)
-  facebook = models.CharField(max_length=100)
-  instagram = models.CharField(max_length=100)
+  linkedin = models.CharField(max_length=200)
+  facebook = models.CharField(max_length=200)
+  instagram = models.CharField(max_length=200)
   def __str__(self):
          return self.name
 
 class Alumni(models.Model):
   name = models.CharField(max_length=100)
-  image=models.ImageField(upload_to='images')
+  image=models.ImageField(upload_to='images/Alumni')
   email = models.EmailField(unique=True)
   phoneno=models.IntegerField(default=0)
-  post = models.CharField(max_length=100)
-  startyear = models.DateField(default=0)
   passyear = models.DateField(default=0)
-  linkedin = models.CharField(max_length=100)
-  facebook = models.CharField(max_length=100)
-  instagram = models.CharField(max_length=100)
+  linkedin = models.CharField(max_length=200)
+  facebook = models.CharField(max_length=200)
+  instagram = models.CharField(max_length=200)
   def __str__(self):
          return self.name
+
+class Event(models.Model):
+  EventName = models.CharField(max_length=100)
+  Image=models.ImageField(upload_to='images/Events')
+  StartDate = models.DateField(default=0)
+  EndDate = models.DateField(default=0)
+  Location = models.CharField(max_length=500,blank=True)
+  Link = models.CharField(max_length=5000,blank=True)
+  Description = models.CharField(max_length=5000,blank=True)
+  EventTense = models.CharField(max_length=100,blank=True)
+  
+  def __str__(self):
+         return self.EventName
 
