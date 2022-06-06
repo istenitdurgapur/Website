@@ -29,7 +29,7 @@ const Modal = props => {
 
   const closeModal = () => {
     modalTween.reverse();
-    gsap.delayedCall(modalTween.duration(), props.close);
+    gsap.delayedCall(modalTween.duration()*(3/4), props.close);
   }
 
   return (
@@ -40,7 +40,7 @@ const Modal = props => {
         onClick={closeModal}
       />
       <div className="modal-dialog" ref={e => (modalDialog = e)}>
-        <ModalContent ref={modalContent} cardInfo={props.cardInfo} />
+        <ModalContent ref={modalContent} cardInfo={props.cardInfo} close={closeModal} />
       </div>
     </div>
   );

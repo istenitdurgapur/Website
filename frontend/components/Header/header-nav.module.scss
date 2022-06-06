@@ -23,8 +23,8 @@
           opacity: 0;
 
           @supports (backdrop-filter: blur(10px)) {
-            background: rgba(var(--color-white),0.6);
-            backdrop-filter: blur(10px);
+            background: rgba(255 , 255 , 255 ,0.4);
+            backdrop-filter: blur(15px);
           }
 
           &.open {
@@ -52,8 +52,8 @@
         opacity: 0;
 
         @supports (backdrop-filter: blur(10px)) {
-            background: rgba(var(--color-white),0.6);
-            backdrop-filter: blur(10px);
+            background: rgba(255 , 255 , 255 ,0.4);
+            backdrop-filter: blur(15px);
         }
 
         &.open {
