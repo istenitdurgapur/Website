@@ -1,17 +1,30 @@
 import React, { forwardRef } from "react";
-import s from './Modal.styles.module.scss'
+import s from "./Modal.styles.module.scss";
 
-const ModalContent = forwardRef((props, ref) => {
-  console.log(props);
+const ModalContent = forwardRef(({ cardInfo, close }, ref) => {
+  console.log(cardInfo);
   return (
     <div className="modal-content-container" ref={ref}>
-      <div className={s.closeButton} >
-        <button onClick={props.close}>
-          &#10005;
-        </button>
+      <div className={s.closeButton}>
+        <button onClick={close}>&#10005;</button>
       </div>
-      <h1 style={{textAlign : "center" , fontSize : "40px"}}> {props.cardInfo.title} </h1>
-      <p style={{textAlign : "center"}} >{props.cardInfo.description}</p>
+      <h1 className={s.title}> {cardInfo.title} </h1>
+      <div className={s.container}>
+        <div className={s.image}>
+          <img src={cardInfo.img} alt={cardInfo.title} />
+        </div>
+        <div className={s.description}>
+          <h2>Description :- </h2>
+          <p>{cardInfo.description}</p>
+          <hr className={s.hr} />
+          <div className={s.details}>
+            <h3>Registrations open from :- </h3>
+            <h3>Event start date :- {cardInfo.startDate}</h3>
+            <h3>Event end date :- {cardInfo.endDate}</h3>
+            <button className={`${s.button} ${s.buttonHyperion}`} ><span><span>Go to Event</span></span></button>
+          </div>
+        </div>
+      </div>
       {/* <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil neque
         explicabo deleniti, corrupti expedita repellendus aliquam fugit possimus
@@ -42,11 +55,10 @@ const ModalContent = forwardRef((props, ref) => {
         quibusdam enim eos repellendus nobis odit et aliquid quod, laboriosam
         harum!
       </p> */}
-      
     </div>
   );
 });
 
-ModalContent.displayName = 'ModalContent';
+ModalContent.displayName = "ModalContent";
 
 export default ModalContent;
