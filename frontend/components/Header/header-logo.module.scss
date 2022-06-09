@@ -1,14 +1,19 @@
 
 .logo {
-      grid-column: 1/2;
-      align-self: center;
-
-      svg {
-          height: 42px;
-          width: auto;
-      }
+      
+      background: url('/logo.svg');
+      height: 65px;
+      width: 65px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: 10px;
 }
 
-
+@media only screen and (max-width: 1000px) {
+      .logo {
+            height: 55px;
+            width: 55px;
+      }
+    }
 
 

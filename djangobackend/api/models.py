@@ -20,7 +20,7 @@ class Alumni(models.Model):
   image=models.ImageField(upload_to='images/Alumni')
   email = models.EmailField(unique=True)
   phoneno=models.IntegerField(default=0)
-  passyear = models.DateField(default=0)
+  passyear = models.IntegerField(default=0)
   linkedin = models.CharField(max_length=200)
   facebook = models.CharField(max_length=200)
   instagram = models.CharField(max_length=200)

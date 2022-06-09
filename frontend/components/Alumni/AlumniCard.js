@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-function TeamCard({d}) {
+function AlumniCard({d}) {
   return (
-    <div className=" h-[425px]  w-[250px] bg-white  transition-all duration-500 hover:scale-110 drop-shadow-md hover:drop-shadow-xl  rounded-xl  m-6 group">
+    <div className=" h-[400px]  w-[250px] bg-white  transition-all duration-500 hover:scale-110 drop-shadow-md hover:drop-shadow-xl  rounded-xl  m-6 group">
       <Image
         className="rounded-t-2xl"
         src={d.image}
@@ -20,9 +20,6 @@ function TeamCard({d}) {
       <div className="text-center">
         <p className="text-gray-900  text-xl flex justify-center font-medium mt-2 mb-1">
           {d.name}
-        </p>
-        <p className="text-gray-900  text-sm flex justify-center font-medium">
-          {d.post}
         </p>
       </div>
       <div className=" flex row space-x-5 justify-center mt-8">
@@ -67,7 +64,7 @@ function TeamCard({d}) {
   );
 }
 
-export default TeamCard;
+export default AlumniCard;
 
 // blur effect of images before loading code
 const shimmer = (w, h) => `
