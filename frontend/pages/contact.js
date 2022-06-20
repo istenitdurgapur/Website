@@ -1,4 +1,3 @@
-import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import navigation from "../data";
 import Footer from "../components/Footer";
@@ -6,10 +5,8 @@ import Circles from "../components/contact/Circles"
 
 export default function contact() {
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <Header items={navigation} navPosition="right" />
-      </div>
+    <div>
+     <Header items={navigation} navPosition="right" />
       <section
         className="py-10 px-4 lg:px-16 overflow-hidden relative z-10"
         data-aos="fade-up"

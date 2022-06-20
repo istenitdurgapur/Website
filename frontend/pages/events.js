@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styles from "../styles/Home.module.css";
 import s from "../styles/Events.module.scss";
 import Header from "../components/Header";
 import navigation from "../data";
@@ -25,9 +24,7 @@ const Events = ({ events, ...otherProps }) => {
   return (
     <div className={s.container}>
       <div>
-        <div className={styles.header}>
-          <Header items={navigation} navPosition="right" />
-        </div>
+      <Header items={navigation} navPosition="right" />
 
         <div className={s.wrapper}>
           {events.map((event) => {

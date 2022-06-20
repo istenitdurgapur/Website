@@ -1,5 +1,4 @@
 import React from "react";
-import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import navigation from "../data"; 
 import Footer from '../components/Footer';
@@ -8,9 +7,7 @@ import AlumniSection from "../components/Alumni/AlumniSection";
 function Alumni() {
   return (
     <div>
-      <div className={styles.header}>
-        <Header items={navigation} navPosition="right" />
-      </div>
+      <Header items={navigation} navPosition="right" />
       <p className="flex justify-center items-center  text-gray-600  text-2xl lg:text-5xl underline underline-offset-4 decoration-1 mt-16">
        OUR ALUMNI
         </p>
