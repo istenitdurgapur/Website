@@ -38,7 +38,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 1050px) {
       padding-top: 100px;
       flex-direction: column;
     }
@@ -46,16 +46,17 @@
 
   .profileCard {
     width: 45%;
-    height: fit-content;
+    height:300px;
     margin: auto;
     box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
     background: #fff;
     border-radius: 12px;
     position: relative;
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 1050px) {
+      height:fit-content;
       width: 80%;
-      margin-bottom: 90px;
+      margin-bottom: 100px;
     }
 
     &.active {
