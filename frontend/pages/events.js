@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import s from "../styles/Events.module.scss";
 import Header from "../components/Header";
+import Tiltle from "../components/Title";
 import navigation from "../data";
 import Footer from "../components/Footer";
 import EventCard from "../components/EventsCard";
@@ -24,8 +25,9 @@ const Events = ({ events, ...otherProps }) => {
   return (
     <div className={s.container}>
       <div>
-      <Header items={navigation} navPosition="right" />
+      <Header items={navigation} navPosition="right" fontColor="black"/>
 
+      <Tiltle title="Our Events" />
         <div className={s.wrapper}>
           {events.map((event) => {
             return (

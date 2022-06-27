@@ -5,7 +5,8 @@
   // position: absolute;
   width: 100%;
   height: 72px;
-  z-index: 99;
+  z-index: 100;
+  position: fixed;top: 0;
 
   @include media-query($medium-down) {
     background: var(--color-white);
@@ -28,4 +29,7 @@
         }
       }
   }
+}
+.fontWhite{
+  color: white;
 }
