@@ -1,17 +1,18 @@
+import React from "react";
 import s from "../styles/Home.module.scss";
 import Header from "../components/Header";
-import navigation from "../data";
 import Footer from "../components/Footer";
-import Carousels from '../components/Carousel/Carousels'
+import navigation from "../data";
+import Carousels from "../components/Carousel/Carousels";
 
 export default function Home() {
   return (
     <div>
-      <Header items={navigation} navPosition="right" />
+      <Header items={navigation} navPosition="right" fontColor="white" />
+      <section className={s.hero}>
+        <div className={s.heroImageContainer}></div>
+      </section>
       <div className={s.container}>
-        <section className={s.hero}>
-          <h1>Hero section</h1>
-        </section>
         <section className={s.about}>
           <h1>About</h1>
           <p>
@@ -26,27 +27,24 @@ export default function Home() {
         </section>
         <section className={s.faculty}>
           <h1 className="mb-6">PHOTO GALLERY</h1>
-        <Carousels/>
+          <Carousels />
         </section>
-        
+
         <section className={s.faculty}>
           <h1>Faculty Advisors</h1>
           <div className={s.wrapper}>
             <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
-                <img
-                  src="http://istenitdgp.com/fa2.png"
-                  alt="profile card"
-                />
+                <img src="http://istenitdgp.com/fa2.png" alt="profile card" />
               </div>
               <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
                 <div className={s.profileCard__name}>
-                  Dr. Anita Pal CHIEF-FACULTY ADVISOR
+                  Dr. Anita Pal <br /> CHIEF-FACULTY ADVISOR
                 </div>
                 <div className={s.profileCard__txt}>
-                  Get abuzz and shroud yourself with knowledge to extinguish
+                  {/* Get abuzz and shroud yourself with knowledge to extinguish
                   moribundity,as knowledge is a wing with which one can fly to
-                  the heaven.
+                  the heaven. */}
                 </div>
               </div>
             </div>
@@ -59,21 +57,20 @@ export default function Home() {
               </div>
               <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
                 <div className={s.profileCard__name}>
-                  Prof. Rowdra Ghatak FACULTY ADVISOR
+                  Prof. Rowdra Ghatak <br /> FACULTY ADVISOR
                 </div>
                 <div className={s.profileCard__txt}>
-                  Nothing in this world can take the place of persistence.
+                  {/* Nothing in this world can take the place of persistence.
                   Talent will not: nothing is more common than unsuccessful men
                   with talent. Genius will not; unrewarded genius is almost a
                   proverb. Education will not: the world is full of educated
-                  derelicts. Persistence and determination alone are omnipotent.
+                  derelicts. Persistence and determination alone are omnipotent. */}
                 </div>
               </div>
             </div>
           </div>
-          
         </section>
-       
+
         <section className={s.sponsers}>
           <h1>Our sponsers</h1>
           <div className={s.slider}>

@@ -7,7 +7,10 @@ import HeaderBurger from "./HeaderBurger";
 import { useMediaQuery } from "../../hooks";
 import s from "./header.module.scss";
 
-const Header = ({ items, logo, navPosition }) => {
+const Header = ({ items, logo, navPosition , fontColor }) => {
+
+  const color = fontColor === "white" ? s.fontWhite : "";
+
   //Setup state to determine if menu is open or not
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isSmallScreen = useMediaQuery("(max-width: 989px)");
@@ -91,7 +94,7 @@ const Header = ({ items, logo, navPosition }) => {
   };
 
   return (
-    <header className={s.header}>
+    <header className={`${s.header} ${color}`}>
       <div className={s.header__wrapper} data-nav-position={navPosition}>
         <HeaderLogo logo={logo} />
         <HeaderNav items={navItems} isMenuOpen={isMenuOpen} ref={navRef} />
