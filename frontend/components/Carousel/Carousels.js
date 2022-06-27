@@ -29,6 +29,14 @@ export default function Carousels() {
                 navigation={true}
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
+                breakpoints={{
+                    375: {
+                      slidesPerView: 1,
+                    },
+                    1000: {
+                      slidesPerView: 2,
+                    },
+                  }}
                 
             >
 
