@@ -1,15 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .six h1 {
   position: relative;
   padding: 0;
   margin: 0;
-  font-weight: 500;
-  font-size: 40px;
-  color: #080808;
+  font-size: 46px;
   -webkit-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
+// .six span{
 
+// }
+.six h1 , .six span{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 36px;
+  color: #001F48;
+}
 .tagline {
   display: block;
   font-size: 0.5em;
@@ -22,12 +29,10 @@
 
 .six h1 {
   text-align: center;
-  font-size: 36px;
-  font-weight: 600;
+  font-family: 'Bebas Neue', cursive;
   text-transform: uppercase;
-  word-spacing: 1px;
-  letter-spacing: 2px;
-  color: black;
+  word-spacing: 2px;
+  letter-spacing: 8px;
 }
 .tagline {
   line-height: 2em;
@@ -42,20 +47,20 @@
   word-spacing: 1px;
   letter-spacing: none;
 }
-.six h1:after,
-.six h1:before {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 45px;
-  height: 4px;
-  content: "";
-  right: 45px;
-  margin: auto;
-  background-color: #ccc;
-}
-.six h1:before {
-  background-color: #5A68D8;
-  left: 45px;
-  width: 90px;
-}
+// .six h1:after,
+// .six h1:before {
+//   position: absolute;
+//   left: 0;
+//   bottom: 0;
+//   width: 45px;
+//   height: 4px;
+//   content: "";
+//   right: 45px;
+//   margin: auto;
+//   background-color: #ccc;
+// }
+// .six h1:before {
+//   background-color: #0496FF;
+//   left: 45px;
+//   width: 90px;
+// }

@@ -7,9 +7,30 @@ import HeaderBurger from "./HeaderBurger";
 import { useMediaQuery } from "../../hooks";
 import s from "./header.module.scss";
 
-const Header = ({ items, logo, navPosition , fontColor }) => {
+const Header = ({ items, logo, navPosition , home }) => {
 
-  const color = fontColor === "white" ? s.fontWhite : "";
+  //scroll
+  const [scrolled,setScrolled]=React.useState(false);
+
+  const handleScroll=() => {
+    const offset=window.scrollY;
+    if(offset > 100 ){
+      setScrolled(true);
+    }
+    else{
+      setScrolled(false);
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('scroll',handleScroll)
+  })
+  let homeNav = home ? s.home : " ";
+  let notHomeNav = !home ? s.notHome : " ";
+  let scroll = scrolled && home ? s.scrolled : "";
+  // let x=['navbar'];
+  // if(scrolled){
+  //   x.push('scrolled');
+  // }
 
   //Setup state to determine if menu is open or not
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -94,11 +115,11 @@ const Header = ({ items, logo, navPosition , fontColor }) => {
   };
 
   return (
-    <header className={`${s.header} ${color}`}>
+    <header className={`${s.header} ${scroll} ${notHomeNav} ${homeNav} `}>
       <div className={s.header__wrapper} data-nav-position={navPosition}>
         <HeaderLogo logo={logo} />
         <HeaderNav items={navItems} isMenuOpen={isMenuOpen} ref={navRef} />
-        <HeaderBurger toggleNav={toggleNav} isMenuOpen={isMenuOpen} />
+        <HeaderBurger toggleNav={toggleNav} isMenuOpen={isMenuOpen} home={home} />
       </div>
     </header>
   );

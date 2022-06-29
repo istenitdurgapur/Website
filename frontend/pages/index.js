@@ -8,12 +8,12 @@ import Carousels from "../components/Carousel/Carousels";
 export default function Home() {
   return (
     <div>
-      <Header items={navigation} navPosition="right" fontColor="white" />
+      <Header items={navigation} navPosition="right" home={true} />
       <section className={s.hero}>
         <div className={s.heroImageContainer}></div>
       </section>
       <div className={s.container}>
-        <section className={s.about}>
+        <section className={s.about}> 
           <h1>About</h1>
           <p>
             The Indian Society for Technical Education(ISTE) is the leading
@@ -25,7 +25,7 @@ export default function Home() {
             and other International Projects.
           </p>
         </section>
-        <section className={s.faculty}>
+        <section className={s.gallery}>
           <h1 className="mb-6">PHOTO GALLERY</h1>
           <Carousels />
         </section>

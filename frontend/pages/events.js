@@ -25,7 +25,7 @@ const Events = ({ events, ...otherProps }) => {
   return (
     <div className={s.container}>
       <div>
-      <Header items={navigation} navPosition="right" fontColor="black"/>
+      <Header items={navigation} navPosition="right" home={false}/>
 
       <Tiltle title="Our Events" />
         <div className={s.wrapper}>

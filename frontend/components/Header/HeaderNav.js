@@ -3,7 +3,6 @@ import s from "./header-nav.module.scss";
 
 const HeaderNav = React.forwardRef(({ items, isMenuOpen }, ref) => {
   const openClass = isMenuOpen ? s.open : "";
-
   return (
     <nav className={`${s.nav} ${openClass}`} ref={ref}>
       {items.map(item => (
