@@ -3,14 +3,17 @@ import Header from '../components/Header'
 import navigation from "../data"; 
 import Footer from '../components/Footer';
 import AlumniSection from "../components/Alumni/AlumniSection";
+import Title from "../components/Title"
 
 function Alumni() {
+  const styles = {
+    marginTop : "120px"
+  }
   return (
-    <div>
-      <Header items={navigation} navPosition="right" />
-      <p className="flex justify-center items-center  text-gray-600  text-2xl lg:text-5xl underline underline-offset-4 decoration-1 mt-16">
-       OUR ALUMNI
-        </p>
+    <div style={styles} >
+      <Header items={navigation} navPosition="right" home={false} />
+      <Title title="OUR ALUMNI" font="45" margin="60" />
+      
       <AlumniSection  year={2020} />
       <AlumniSection year={2021} />
       <AlumniSection year={2022} />

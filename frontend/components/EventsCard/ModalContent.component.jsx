@@ -18,7 +18,7 @@ const ModalContent = forwardRef(({ cardInfo, close }, ref) => {
           <p>{cardInfo.description}</p>
           <hr className={s.hr} />
           <div className={s.details}>
-            <h3>Registrations open from :- </h3>
+            <h3 className={s.registration} >Registrations open from :- </h3>
             <h3>Event start date :- {cardInfo.startDate}</h3>
             <h3>Event end date :- {cardInfo.endDate}</h3>
             <button className={`${s.button} ${s.buttonHyperion}`} ><span><span>Go to Event</span></span></button>

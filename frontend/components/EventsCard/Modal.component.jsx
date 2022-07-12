@@ -29,7 +29,7 @@ const Modal = props => {
 
   const closeModal = () => {
     modalTween.reverse();
-    gsap.delayedCall(modalTween.duration()*(3/4), props.close);
+    gsap.delayedCall(modalTween.duration(), props.close);
   }
 
   return (

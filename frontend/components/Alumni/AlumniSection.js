@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Tiltle from "../Title";
 import AlumniCard from "./AlumniCard";
 
 
@@ -26,16 +27,14 @@ function AlumniSection({ year }) {
 
         
       });
-  }, []);
+  }, [year]);
 
   if (isLoading) return <p> </p>;
   if (!data) return <p>No profile data</p>;
   return (
-    <div className="flex-col  justify-center items-center mt-24 mb-10">
-      <p className="flex justify-center items-center  text-gray-600  text-2xl lg:text-3xl underline underline-offset-4 decoration-1 ">
-        {year} BATCH
-      </p>
-      <div className="flex flex-wrap   justify-center items-center mt-8 w-full md:p-20">
+    <div className="flex-col  justify-center items-center ">
+      <Tiltle title={`${year} BATCH`} font="30" margin="45" />
+      <div className="flex flex-wrap justify-center items-center w-full ">
         {data.map(function (d, i) {
           return (
             <AlumniCard d = {d} key={i} />

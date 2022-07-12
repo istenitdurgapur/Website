@@ -6,7 +6,7 @@ import Circles from "../components/contact/Circles"
 export default function contact() {
   return (
     <div>
-     <Header items={navigation} navPosition="right" />
+     <Header items={navigation} navPosition="right" home={false} />
       <section
         className="py-10 px-4 lg:px-16 overflow-hidden relative z-10"
         data-aos="fade-up"

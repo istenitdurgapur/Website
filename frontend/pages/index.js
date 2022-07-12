@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import navigation from "../data";
 import Carousels from "../components/Carousel/Carousels";
+import Tiltle from "../components/Title";
 
 export default function Home() {
   return (
@@ -13,8 +14,8 @@ export default function Home() {
         <div className={s.heroImageContainer}></div>
       </section>
       <div className={s.container}>
-        <section className={s.about}> 
-          <h1>About</h1>
+        <section className={s.about}>
+          <Tiltle title="ABOUT US" font="36" margin="30" />
           <p>
             The Indian Society for Technical Education(ISTE) is the leading
             National Professional non-profit making Society for the Technical
@@ -26,12 +27,14 @@ export default function Home() {
           </p>
         </section>
         <section className={s.gallery}>
-          <h1 className="mb-6">PHOTO GALLERY</h1>
-          <Carousels />
+          <Tiltle title="PHOTO GALLERY" font="36" margin="30" />
+          <div className={s.Carousel}>
+            <Carousels />
+          </div>
         </section>
 
         <section className={s.faculty}>
-          <h1>Faculty Advisors</h1>
+          <Tiltle title="FACULTY ADVISORS" font="36" margin="30" />
           <div className={s.wrapper}>
             <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
@@ -39,7 +42,7 @@ export default function Home() {
               </div>
               <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
                 <div className={s.profileCard__name}>
-                  Dr. Anita Pal <br /> CHIEF-FACULTY ADVISOR
+                  Dr. Anita Pal <br /> <span className={s.profileCard__name__designation} > CHIEF-FACULTY ADVISOR </span>
                 </div>
                 <div className={s.profileCard__txt}>
                   {/* Get abuzz and shroud yourself with knowledge to extinguish
@@ -57,7 +60,7 @@ export default function Home() {
               </div>
               <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
                 <div className={s.profileCard__name}>
-                  Prof. Rowdra Ghatak <br /> FACULTY ADVISOR
+                  Prof. Rowdra Ghatak <br /><span className={s.profileCard__name__designation} > FACULTY ADVISOR </span>
                 </div>
                 <div className={s.profileCard__txt}>
                   {/* Nothing in this world can take the place of persistence.
@@ -72,7 +75,7 @@ export default function Home() {
         </section>
 
         <section className={s.sponsers}>
-          <h1>Our sponsers</h1>
+          <Tiltle title="OUR SPONSERS" font="36" margin="30" />
           <div className={s.slider}>
             <div className={s.slideTrack}>
               <div className={s.slide}>

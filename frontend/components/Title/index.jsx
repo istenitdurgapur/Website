@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import s from "./title.styles.module.scss";
 
-function Tiltle({ title }) {
+function Tiltle({ title  , tagline , font , margin}) {
   let words = title.split(" ");
+  const style = {
+    fontSize : `${font}px`,
+    margin : `${margin}px 0`
+  }
   return (
-    <div className={s.six}>
-      <h1>
-        {words[0]} <span>{words[1]}</span>
-        <span className={s.tagline} ></span>
-      </h1>
-    </div>
+    <div class={s.four}>
+  <h1 style={style} ><span className={s.tagline}>{tagline}</span> <span className={s.headWord} >{words[0]}</span> {words[1]}</h1>
+</div>
+    
   );
 }
 
