@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from '../components/Header'
 import navigation from "../data"; 
 import Footer from '../components/Footer';
 import TeamSection from "../components/Teams/TeamSection";
 import Title from "../components/Title"
+import Loader from "../components/loader/Loader";
 
 function Team({teams}) {
   const styles = {
     marginTop : "120px"
   }
-  return (
+   // loader screen 
+   const [spinner, setSpinner] = useState(true);
+
+   // It will be executed before rendering
+ 
+   useEffect(() => {
+     setTimeout(() => setSpinner(false), 1000)
+   }, []);
+ 
+   // [] means like componentDidMount
+ 
+ 
+ 
+   return spinner ? (
+     <div>
+     <Loader/>
+     </div>
+   ) :(
     <div style={styles}  >
       <Header items={navigation} navPosition="right" home={false} />
       <Title title="OUR TEAM" font="45" margin="60" />

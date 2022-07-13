@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import s from "../styles/Home.module.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import navigation from "../data";
 import Carousels from "../components/Carousel/Carousels";
 import Tiltle from "../components/Title";
+import Loader from "../components/loader/Loader";
 
 export default function Home({ images, sponsers }) {
-  return (
+
+  // loader screen 
+  const [spinner, setSpinner] = useState(true);
+
+  // It will be executed before rendering
+
+  useEffect(() => {
+    setTimeout(() => setSpinner(false), 1000)
+  }, []);
+
+  // [] means like componentDidMount
+
+
+
+  return spinner ? (
     <div>
+    <Loader/>
+    </div>
+  ) :
+
+
+    (<div>
       <Header items={navigation} navPosition="right" home={true} />
       <section className={s.hero}>
         <div className={s.heroImageContainer}></div>
@@ -99,7 +120,7 @@ export default function Home({ images, sponsers }) {
       </div>
       <Footer />
     </div>
-  );
+    );
 }
 
 

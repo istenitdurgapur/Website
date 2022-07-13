@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "../styles/Events.module.scss";
 import Header from "../components/Header";
 import Tiltle from "../components/Title";
@@ -6,6 +6,7 @@ import navigation from "../data";
 import Footer from "../components/Footer";
 import EventCard from "../components/EventsCard";
 import Modal from "../components/EventsCard/Modal.component";
+import Loader from "../components/loader/Loader";
 
 const Events = ({ events, ...otherProps }) => {
  
@@ -22,7 +23,24 @@ const Events = ({ events, ...otherProps }) => {
     setIsModalVisible(false);
   };
 
-  return (
+   // loader screen 
+   const [spinner, setSpinner] = useState(true);
+
+   // It will be executed before rendering
+ 
+   useEffect(() => {
+     setTimeout(() => setSpinner(false), 1000)
+   }, []);
+ 
+   // [] means like componentDidMount
+ 
+ 
+ 
+   return spinner ? (
+     <div>
+     <Loader/>
+     </div>
+   ) :(
     <div className={s.container}>
       <div>
         <Header items={navigation} navPosition="right" home={false} />
