@@ -16,7 +16,7 @@ function Team({teams}) {
    // It will be executed before rendering
  
    useEffect(() => {
-     setTimeout(() => setSpinner(false), 1000)
+     setTimeout(() => setSpinner(false), 500)
    }, []);
  
    // [] means like componentDidMount

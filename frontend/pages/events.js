@@ -29,7 +29,7 @@ const Events = ({ events, ...otherProps }) => {
    // It will be executed before rendering
  
    useEffect(() => {
-     setTimeout(() => setSpinner(false), 1000)
+     setTimeout(() => setSpinner(false), 500)
    }, []);
  
    // [] means like componentDidMount
@@ -58,6 +58,7 @@ const Events = ({ events, ...otherProps }) => {
                 endDate={event.EndDate}
                 location={event.Location}
                 showModal={showModal}
+                link={event.Link}
               />
             );
           })}
