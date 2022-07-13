@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import TeamSection from "../components/Teams/TeamSection";
 import Title from "../components/Title"
 
-function Team() {
+function Team({teams}) {
   const styles = {
     marginTop : "120px"
   }
@@ -13,12 +13,25 @@ function Team() {
     <div style={styles}  >
       <Header items={navigation} navPosition="right" home={false} />
       <Title title="OUR TEAM" font="45" margin="60" />
-      <TeamSection title="OFFICE BEARERS" year={4} />
-      <TeamSection title="THIRD YEARS" year={3} />
-      <TeamSection title="SECOND YEARS" year={2} />
+      <TeamSection teams={teams} title="OFFICE BEARERS" year={4} />
+      <TeamSection teams={teams} title="THIRD YEARS" year={3} />
+      <TeamSection teams={teams} title="SECOND YEARS" year={2} />
       <Footer />
     </div>
   );
 }
 
 export default Team;
+
+
+
+export async function getStaticProps() {
+  const res = await fetch("http://127.0.0.1:8000/api/student/");
+  const teams = await res.json();
+
+  return {
+    props: {
+      teams,
+    },
+  };
+}

@@ -6,7 +6,7 @@ import navigation from "../data";
 import Carousels from "../components/Carousel/Carousels";
 import Tiltle from "../components/Title";
 
-export default function Home() {
+export default function Home({ images, sponsers }) {
   return (
     <div>
       <Header items={navigation} navPosition="right" home={true} />
@@ -29,7 +29,7 @@ export default function Home() {
         <section className={s.gallery}>
           <Tiltle title="PHOTO GALLERY" font="36" margin="30" />
           <div className={s.Carousel}>
-            <Carousels />
+            <Carousels images={images} />
           </div>
         </section>
 
@@ -78,118 +78,21 @@ export default function Home() {
           <Tiltle title="OUR SPONSERS" font="36" margin="30" />
           <div className={s.slider}>
             <div className={s.slideTrack}>
-              <div className={s.slide}>
-                <img
-                  src="https://www.scorepromotions.com/assets/score/img/clients/Air-Canada-01.jpg"
-                  height="100"
-                  width="100"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
-              <div className={s.slide}>
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
-                  height="100"
-                  width="250"
-                  alt=""
-                />
-              </div>
+              {sponsers.map((data) => {
+                return (
+                  <div key={data.id} className={s.slide}>
+                    <img
+                      src={data.Image}
+                      height="100"
+                      width="100"
+                      alt=""
+                    />
+                  </div>
+
+                )
+
+              })}
+
             </div>
           </div>
         </section>
@@ -198,3 +101,23 @@ export default function Home() {
     </div>
   );
 }
+
+
+
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  const res1 = await fetch("http://127.0.0.1:8000/api/gallery/");
+  const res2 = await fetch("http://127.0.0.1:8000/api/sponsers/");
+  const images = await res1.json();
+  const sponsers = await res2.json();
+
+  // By returning { props: { events } }, the component
+  // will receive `events` as a prop at build time
+  return {
+    props: {
+      images, sponsers,
+    },
+  };
+}
+

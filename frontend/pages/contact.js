@@ -1,23 +1,18 @@
 import Header from "../components/Header";
 import navigation from "../data";
 import Footer from "../components/Footer";
-import Circles from "../components/contact/Circles"
 
 export default function contact() {
   return (
     <div>
      <Header items={navigation} navPosition="right" home={false} />
       <section
-        className="py-10 px-4 lg:px-16 overflow-hidden relative z-10"
+        className="py-10 px-4 lg:px-16 overflow-hidden relative z-10 mt-20"
         data-aos="fade-up"
         id="contact"
       >
-        <div className="container">
-          <div className=" flex items-center max-w-md">
-            <h2 className="text-slate-900  underline underline-offset-4 decoration-yellow-400 text-5xl font-bold font-serif">
-              Get In Touch
-            </h2>
-          </div>
+        <div className="container bg-gray-100 p-6 rounded-2xl border">
+         
           <div className="flex flex-col lg:flex-row lg:items-center text-slate-900 dark:text-gray-200 lg:justify-between -mx-4">
             <div
               className="w-full lg:w-1/2 xl:w-6/12 px-4"
@@ -157,21 +152,7 @@ export default function contact() {
                   </div>
                 </form>
                 <div>
-                  <span className="absolute -top-10 -right-9 z-[-1]">
-                    <svg
-                      width="100"
-                      height="100"
-                      viewBox="0 0 100 100"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 100C0 44.7715 0 0 0 0C55.2285 0 100 44.7715 100 100C100 100 100 100 0 100Z"
-                        fill="#FACC15"
-                      />
-                    </svg>
-                  </span>
-                  <Circles />
+                 
 
                 </div>
               </div>

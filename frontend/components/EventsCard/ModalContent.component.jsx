@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import s from "./Modal.styles.module.scss";
 
 const ModalContent = forwardRef(({ cardInfo, close }, ref) => {
-  console.log(cardInfo);
+ 
   return (
     <div className="modal-content-container" ref={ref}>
       <div className={s.closeButton}>

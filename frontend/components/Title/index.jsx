@@ -8,7 +8,7 @@ function Tiltle({ title  , tagline , font , margin}) {
     margin : `${margin}px 0`
   }
   return (
-    <div class={s.four}>
+    <div className={s.four}>
   <h1 style={style} ><span className={s.tagline}>{tagline}</span> <span className={s.headWord} >{words[0]}</span> {words[1]}</h1>
 </div>
     

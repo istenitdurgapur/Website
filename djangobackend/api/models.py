@@ -40,3 +40,8 @@ class Event(models.Model):
   def __str__(self):
          return self.EventName
 
+class gallery(models.Model):
+  Image=models.ImageField(upload_to='images/gallery')
+
+class sponsers(models.Model):
+  Image=models.ImageField(upload_to='images/sponsers')

@@ -8,7 +8,7 @@ import EventCard from "../components/EventsCard";
 import Modal from "../components/EventsCard/Modal.component";
 
 const Events = ({ events, ...otherProps }) => {
-  console.log(events);
+ 
   //animation code
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [cardInfo, setCardInfo] = useState(false);
