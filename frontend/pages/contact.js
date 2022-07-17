@@ -32,7 +32,7 @@ const Contact = () => {
         data-aos="fade-up"
         id="contact"
       >
-        <Tiltle title="CONTACT US" font="36" margin="30" />
+        <Tiltle title="CONTACT US" font="36" margin="10" />
         <div className="container p-6 rounded-2xl ">
           <div className="flex flex-col lg:flex-row lg:items-center text-slate-900 dark:text-gray-200 lg:justify-between -mx-4">
             <div
@@ -43,7 +43,7 @@ const Contact = () => {
               <div className="max-w-[570px] mb-12 lg:mb-0">
                 <div className="flex items-center text-center mb-4 ">
                   <svg
-                    className="h-6  fill-[#0076fe]"
+                    className="h-5  fill-[#0076fe]"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"
                   >
@@ -51,19 +51,19 @@ const Contact = () => {
                   </svg>
 
                   <p
-                    className="flex items-center text-3xl text-center font-bold text-[#0076fe] mx-4"
+                    className="flex items-center text-xl md:text-2xl text-center font-bold text-[#0076fe] mx-3"
                     style={font}
                   >
                     LOCATION
                   </p>
                 </div>
 
-                <p className="text-base text-xl font-normal leading-relaxed mb-9">
+                <p className="text-base  font-normal leading-relaxed mb-9">
                   National Institute of Technology Durgapur West Bengal, India
                 </p>
                 <div className="flex items-center text-center mb-4 ">
                   <svg
-                    className="h-6 fill-[#0076fe] mb-4 "
+                    className="h-5 fill-[#0076fe] mb-4 "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                   >
@@ -71,27 +71,27 @@ const Contact = () => {
                   </svg>
 
                   <p
-                    className="flex items-center text-3xl  font-bold  text-[#0076fe] mb-4  mx-5"
+                    className="flex items-center text-xl md:text-2xl  font-bold  text-[#0076fe] mb-4  mx-3"
                     style={font}
                   >
                     Contact Info
                   </p>
                 </div>
-                <p className="text-base text-xl font-normal text-body-color leading-relaxed  ">
+                <p className="text-base  font-normal text-body-color leading-relaxed  ">
                   Harshit Surana :
                   <span className="font-normal text-[#0076fe] italic">
                     +91 980-006-2969
                   </span>
                 </p>
-                <p className="text-base text-xl font-normal leading-relaxed  mb-9 ">
+                <p className="text-base  font-normal leading-relaxed  mb-9 ">
                   Ritabrata Ganguly :
                   <span className="font-normal text-[#0076fe] italic">
                     +91 980-006-2969
                   </span>
                 </p>
-                <div className="flex items-center text-center mb-4 ">
+                <div className="flex items-center  text-center mb-4 ">
                   <svg
-                    className="h-6  fill-[#0076fe] mb-4"
+                    className="h-5  fill-[#0076fe] mb-4"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                   >
@@ -99,13 +99,13 @@ const Contact = () => {
                   </svg>
 
                   <p
-                    className="text-3xl  font-bold text-[#0076fe] mb-2  mx-5"
+                    className="text-xl md:text-2xl  font-bold text-[#0076fe] mb-4  mx-3"
                     style={font}
                   >
                     Mail Info
                   </p>
                 </div>
-                <p className="text-base text-xl font-normal text-[#0076fe] italic leading-relaxed ">
+                <p className="text-base  font-normal text-[#0076fe] italic leading-relaxed ">
                   istenitdurgapur@gmail.com
                 </p>
               </div>

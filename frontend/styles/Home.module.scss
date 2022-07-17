@@ -186,12 +186,19 @@ $animationSpeed: 40s;
     position: relative;
     width: auto;
     margin-top: 30px;
-    background-color: #fffafa;
+    background-color: #fff;
 
     .slideTrack {
       animation: scroll $animationSpeed linear infinite;
       display: flex;
       width: calc(250px * 14);
+    }
+    .slideTrack:hover{
+      -webkit-animation-play-state:paused;
+      -moz-animation-play-state:paused;
+      -o-animation-play-state:paused;
+      animation-play-state:paused;
+      cursor: pointer;
     }
     .slide {
       height: 100px;
