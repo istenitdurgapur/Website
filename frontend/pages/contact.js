@@ -6,14 +6,54 @@ import Tiltle from "../components/Title";
 import { useEffect, useState } from "react";
 
 const Contact = () => {
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [sentmessage, setSentmessage] = useState("");
+
+
+  let handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      let res = await fetch("http://127.0.0.1:8000/api/contact", {
+        method: "POST",
+        body: JSON.stringify({
+          name: name,
+          phone: phone,
+          email: email,
+          message: message,
+        }),
+      });
+      let resJson = await res.json();
+      if (res.status === 201 || res.status === 202 || res.status === 302) {
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        setSentmessage("Message sent successfully");
+        setTimeout(() => setSentmessage(""), 2000);
+      } else {
+        setSentmessage("Some error occured");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+
+
   // loader screen
   const [spinner, setSpinner] = useState(true);
 
   // It will be executed before rendering
 
   useEffect(() => {
-    setTimeout(() => setSpinner(false), 500);
+    setTimeout(() => setSpinner(false), 1000);
+  
   }, []);
+  
 
   // [] means like componentDidMount
   const font = {
@@ -117,7 +157,13 @@ const Contact = () => {
               data-aos-duration="2000"
             >
               <div className="bg-gray-100 border-2 relative rounded-lg p-8 sm:p-12 shadow-lg">
-                <form>
+                <form onSubmit={handleSubmit}>
+                  <div >{sentmessage ? <div class="bg-green-200 rounded-lg p-2 mb-3 text-base text-green-700 flex justify-center items-center w-full" role="alert">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" class="w-4 h-4 mr-2 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path>
+                    </svg>
+                    Message sent
+                  </div> : null}</div>
                   <div className="mb-6">
                     <input
                       type="text"
@@ -134,6 +180,8 @@ const Contact = () => {
                                     "
                       name="full_name"
                       id="full_name"
+                      onChange={(e) => setName(e.target.value)}
+                      value={name}
                     />
                   </div>
                   <div className="mb-6">
@@ -152,6 +200,8 @@ const Contact = () => {
                                     "
                       name="email"
                       id="email"
+                      onChange={(e) => setEmail(e.target.value)}
+                      value={email}
                     />
                   </div>
                   <div className="mb-6">
@@ -169,6 +219,8 @@ const Contact = () => {
                                     "
                       name="phone_number"
                       id="phone_number"
+                      onChange={(e) => setPhone(e.target.value)}
+                      value={phone}
                     />
                   </div>
                   <div className="mb-6">
@@ -186,6 +238,8 @@ const Contact = () => {
                                     "
                       name="message"
                       id="message"
+                      onChange={(e) => setMessage(e.target.value)}
+                      value={message}
                     ></textarea>
                   </div>
                   <div>
@@ -204,6 +258,7 @@ const Contact = () => {
                     >
                       Send Message
                     </button>
+
                   </div>
                 </form>
                 <div></div>

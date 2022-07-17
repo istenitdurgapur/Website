@@ -1,4 +1,5 @@
 from django.urls import path
+from django.conf.urls import url 
 from api import views
 
 urlpatterns = [
@@ -7,4 +8,5 @@ urlpatterns = [
     path('events/', views.EventsList.as_view()),
     path('gallery/', views.galleryList.as_view()),
     path('sponsers/', views.sponsersList.as_view()),
+     url(r'^contact$', views.messages),
 ]

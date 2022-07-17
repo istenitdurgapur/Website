@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Alumni, Event, Student, gallery, sponsers
+from .models import Alumni, Contact, Event, Student, gallery, sponsers
 class StudentSerializer(serializers.ModelSerializer):
   class Meta:
     model = Student
@@ -20,3 +20,13 @@ class sponsersSerializer(serializers.ModelSerializer):
   class Meta:
     model = sponsers
     fields = ['id','Image']
+
+
+class ContactSerializer(serializers.ModelSerializer):
+ 
+    class Meta:
+        model = Contact
+        fields = ('id',
+                  'name',
+                  'email',
+                  'phone','message')

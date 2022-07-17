@@ -4,10 +4,10 @@ function Loader() {
   return (
     <div id="loader">
         <div id="loading">
-            <div class="loading-screen">
-                <div class="loading-animation">
+            <div className="loading-screen">
+                <div className="loading-animation">
                     <img className="rounded-full logo" src="/logo.jpg" alt="loading"/>
-                    <div class="loading-bar"></div>
+                    <div className="loading-bar"></div>
                 </div>
             </div>
         </div>
