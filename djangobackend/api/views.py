@@ -39,7 +39,7 @@ def messages(request):
         if contact_serializer.is_valid():
             contact_serializer.save()
             send_mail(
-				      "Message from"+	contact_data["name"] +" on ISTE Website",
+				      "Message from "+contact_data["name"] +" on ISTE Website",
 			        	contact_data["message"],
 			        	settings.EMAIL_HOST_USER,
 			        	['jnvomprakash121@gmail.com'],
