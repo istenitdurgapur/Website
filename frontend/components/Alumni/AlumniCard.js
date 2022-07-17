@@ -17,23 +17,15 @@ function AlumniCard({d}) {
       />
 
       <div className="text-center">
-        <p className="text-gray-900  text-xl flex justify-center font-medium mt-2 mb-1">
+        <p className="text-gray-900  text-xl flex justify-center font-medium mt-4 mb-1">
           {d.name}
         </p>
       </div>
       <div className=" flex row space-x-5 justify-center mt-8">
-        <a href={"mailto:" + d.email}>
-          <svg
-            className="w-4 h-4 text-yellow-500 hover:text-yellow-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-          >
-            <path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
-          </svg>
-        </a>
+       
         <a href={d.facebook}>
           <svg
-            className="w-4 h-4 text-blue-600 hover:text-blue-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
+            className="w-5 h-5 text-blue-600 hover:text-blue-700 fill-current transition-all duration-500 group-hover:scale-110 group-hover:m-1 hover:-translate-y-1 "
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -42,7 +34,7 @@ function AlumniCard({d}) {
         </a>
         <a href={d.instagram}>
           <svg
-            className="w-4 h-4 text-red-600 hover:text-red-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
+            className="w-5 h-5 text-red-600 hover:text-red-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
           >
@@ -51,7 +43,7 @@ function AlumniCard({d}) {
         </a>
         <a href={d.linkedin}>
           <svg
-            className="w-4 h-4 text-indigo-600 hover:text-indigo-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
+            className="w-5 h-5 text-indigo-600 hover:text-indigo-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
           >

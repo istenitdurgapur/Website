@@ -7,24 +7,30 @@ import Carousels from "../components/Carousel/Carousels";
 import Tiltle from "../components/Title";
 import Loader from "../components/loader/Loader";
 
-export default function Home({ images, sponsers }) {
+export default function Home({ sponsers }) {
 
-  // loader screen 
-  const [spinner, setSpinner] = useState(true);
 
-  // It will be executed before rendering
+  const [data, setData] = useState([])
+  const [isLoading, setLoading] = useState(false)
 
   useEffect(() => {
-    setTimeout(() => setSpinner(false), 500)
-  }, []);
+    setLoading(true)
+    fetch('http://127.0.0.1:8000/api/gallery/')
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data)
+        setLoading(false)
+      })
+  }, [])
 
-  // [] means like componentDidMount
+  if (!data) return <p>Backend have some problem check your api</p>
 
 
 
-  return spinner ? (
+
+  return isLoading ? (
     <div>
-    <Loader/>
+      <Loader />
     </div>
   ) :
 
@@ -50,7 +56,7 @@ export default function Home({ images, sponsers }) {
         <section className={s.gallery}>
           <Tiltle title="PHOTO GALLERY" font="36" margin="30" />
           <div className={s.Carousel}>
-            <Carousels images={images} />
+            <Carousels images={data} />
           </div>
         </section>
 
@@ -59,7 +65,7 @@ export default function Home({ images, sponsers }) {
           <div className={s.wrapper}>
             <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
-                <img src="http://istenitdgp.com/fa2.png" alt="profile card" />
+                <img src="/fa2.png" alt="profile card" />
               </div>
               <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
                 <div className={s.profileCard__name}>
@@ -75,7 +81,7 @@ export default function Home({ images, sponsers }) {
             <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
                 <img
-                  src="http://istenitdgp.com/rowdra.png"
+                  src="rowdra.png"
                   alt="profile card"
                 />
               </div>
@@ -124,21 +130,18 @@ export default function Home({ images, sponsers }) {
 }
 
 
-
-
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
-  const res1 = await fetch("http://127.0.0.1:8000/api/gallery/");
-  const res2 = await fetch("http://127.0.0.1:8000/api/sponsers/");
-  const images = await res1.json();
-  const sponsers = await res2.json();
+  const res = await fetch("http://127.0.0.1:8000/api/sponsers/");
+  const sponsers = await res.json();
 
   // By returning { props: { events } }, the component
   // will receive `events` as a prop at build time
   return {
     props: {
-      images, sponsers,
+      sponsers,
     },
   };
 }
+
 

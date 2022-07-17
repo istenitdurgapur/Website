@@ -1,12 +1,16 @@
 import React from "react";
-import styles from "./loader.module.css";
 
 function Loader() {
   return (
-    <div className="bg-black min-h-screen flex justify-center items-center">
-      <div className={styles.spinner}>
-        <img src="logo.svg" alt="" />
-      </div>
+    <div id="loader">
+        <div id="loading">
+            <div class="loading-screen">
+                <div class="loading-animation">
+                    <img className="rounded-full logo" src="/logo.jpg" alt="loading"/>
+                    <div class="loading-bar"></div>
+                </div>
+            </div>
+        </div>
     </div>
   );
 }
