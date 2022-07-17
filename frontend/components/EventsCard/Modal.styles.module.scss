@@ -1,11 +1,13 @@
 .closeButton{
-  color: black;
-  background-color: white;
-  font-size: 30px;
+  color:black;
+  background-color: #fff;
+  font-size: 25px;
   position: fixed;
   display: inline;
-  right : 50px;
-  top : 10px;
+  right : 30px;
+  top : 8px;
+  border-radius: 25%;
+  padding: 0 5px 0 5px;
 }
 .title{
   font-size: 36px;
@@ -16,13 +18,12 @@
 }
 .container{
   display: flex;
-  justify-content:space-around;
+  // justify-content:space-around;
   align-items: center;
   flex-direction: row;
 }
 .image{
-  width: 150vw;
-  padding: 0 15px;
+  width: 100%;
   margin-bottom: 30px;
 }
 .description{
@@ -164,7 +165,8 @@
 
 @media only screen and (max-width: 800px){
   .closeButton{
-    right : 20px;
+    right : 15px;
+    
   }
   .container{
     flex-direction: column;
