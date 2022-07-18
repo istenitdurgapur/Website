@@ -147,3 +147,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'opy19225090@gmail.com'
 EMAIL_HOST_PASSWORD = 'uqudfustitfeemkc'
 EMAIL_USE_TLS = True
+
+

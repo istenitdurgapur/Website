@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.db import models
 
 # Create your models here.
@@ -32,8 +33,9 @@ class Event(models.Model):
   Image=models.ImageField(upload_to='images/Events')
   StartDate = models.DateField(default=0)
   EndDate = models.DateField(default=0)
+  time=models.TimeField(default=datetime.time(datetime.now()))
   Location = models.CharField(max_length=500,blank=True)
-  Link = models.CharField(max_length=5000,blank=True)
+  Link = models.CharField(max_length=5000,blank=True,default=" ")
   Description = models.CharField(max_length=5000,blank=True)
   EventTense = models.CharField(max_length=100,blank=True)
   
@@ -46,6 +48,7 @@ class gallery(models.Model):
 
 class sponsers(models.Model):
   Image=models.ImageField(upload_to='images/sponsers')
+  Link = models.CharField(max_length=5000,blank=True,default="no link")
 
 
 

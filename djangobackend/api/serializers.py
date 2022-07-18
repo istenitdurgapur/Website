@@ -11,7 +11,7 @@ class AlumniSerializer(serializers.ModelSerializer):
 class EventsSerializer(serializers.ModelSerializer):
   class Meta:
     model = Event
-    fields = ['id', 'EventName','Image','StartDate','EndDate','Location','Link','Description','EventTense']
+    fields = ['id', 'EventName','Image','StartDate','time','EndDate','Location','Link','Description','EventTense']
 class gallerySerializer(serializers.ModelSerializer):
   class Meta:
     model = gallery
@@ -19,7 +19,7 @@ class gallerySerializer(serializers.ModelSerializer):
 class sponsersSerializer(serializers.ModelSerializer):
   class Meta:
     model = sponsers
-    fields = ['id','Image']
+    fields = ['id','Image','link']
 
 
 class ContactSerializer(serializers.ModelSerializer):

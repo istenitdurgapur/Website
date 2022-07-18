@@ -36,7 +36,7 @@ const Contact = () => {
         setMessage("");
         setSentmessage(" Message sent successfully");
        
-        setTimeout(() => setSentmessage(""), 1000);
+        setTimeout(() => setSentmessage(""), 1500);
       } else {
         setSentmessage("Please fill all the details ");
         setTimeout(() => setSentmessage(""), 1000);
