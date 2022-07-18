@@ -36,7 +36,7 @@ const Contact = () => {
         setMessage("");
         setSentmessage(" Message sent successfully");
        
-        setTimeout(() => setSentmessage(""), 2000);
+        setTimeout(() => setSentmessage(""), 1000);
       } else {
         setSentmessage("Please fill all the details ");
         setTimeout(() => setSentmessage(""), 1000);
@@ -73,11 +73,11 @@ const Contact = () => {
     <div>
       <Header items={navigation} navPosition="right" home={false} />
       <section
-        className="py-10 px-4 lg:px-16 overflow-hidden relative z-10 mt-6"
+        className="py-10 px-4 lg:px-16 overflow-hidden relative z-10 mt-[80px]"
         data-aos="fade-up"
         id="contact"
       >
-        <Tiltle title="CONTACT US" font="36" margin="10" />
+        <Tiltle title="CONTACT US" font="36" margin="15" />
         <div className="container p-6 rounded-2xl ">
           <div className="flex flex-col lg:flex-row lg:items-center text-slate-900 dark:text-gray-200 lg:justify-between -mx-4">
             <div
@@ -104,7 +104,7 @@ const Contact = () => {
                 </div>
 
                 <p className="text-base  font-normal leading-relaxed mb-9">
-                  National Institute of Technology Durgapur West Bengal, India
+                  National Institute of Technology Durgapur , West Bengal , India
                 </p>
                 <div className="flex items-center text-center mb-4 ">
                   <svg
@@ -243,11 +243,11 @@ const Contact = () => {
                     ></textarea>
                   </div>
                   <div>
-                  <div >{sentmessage ? <button class=" w-full text-white font-bold
-                                    bg-purple-500
+                  <div >{sentmessage ? <button className=" w-full text-white font-bold
+                                    bg-yellow-500
                                     rounded-full
                                     p-3
-                                    shadow-md transition-all duration-300" role="alert">
+                                    shadow-md" role="alert">
                     {sentmessage}
                   </button> : <button
                       type="submit"

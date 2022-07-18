@@ -51,7 +51,7 @@ export default function Carousels({ images }) {
                     return (
                         <SwiperSlide key={data.id}>
 
-                            <img className='h-[300px] md:h-[450px] rounded-2xl md:rounded-none' src={data.Image} alt="gallery image"
+                            <img className='h-[300px] md:h-[400px] rounded-2xl md:rounded-none' src={data.Image} alt="gallery image"
                             />
                         </SwiperSlide>
                     )

@@ -58,7 +58,7 @@ a {
 
 .modal-dialog {
   position: relative;
-  width: 80%;
+  width: 90%;
   background-color: #fff;
   border-radius: 5px;
   padding: 20px;
@@ -69,7 +69,7 @@ a {
 .modal-content-container {
   color: black;
   text-align: left;
-  max-height: 80vh;
+  max-height: 85vh;
   overflow: scroll;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -83,12 +83,7 @@ a {
   scrollbar-width: none;  /* Firefox */
 }
 
-
-
-*{
-  margin: 0;
-  padding: 0;
-}
+/*loder*/
 #loader
 {
     position:fixed;
@@ -114,28 +109,33 @@ a {
   width: 100px;
   height: 100px;
 }
-
+.loading-animation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .loading-bar{
-  width: 130px;
-  height: 2px;
+  width: 150px;
+  height: 4px;
   background: #cfcfcf;
-  margin-top: 22px;
+  margin-top: 40px; 
   position: relative;
   overflow: hidden;
 }
 
 .loading-bar::before{
   content: '';
-  width: 68px;
-  height: 2px;
+  width: 45px;
+  height: 4px;
   background: #000000;
   position: absolute;
-  left: -34px;
+  left: -44px;
   animation: greenbar 1.5s infinite ease;
 }
 
 @keyframes greenbar{
   50%{
-    left: 96px;
+    left: 116px;
   }
 }

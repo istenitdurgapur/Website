@@ -17,11 +17,11 @@ function AlumniCard({d}) {
       />
 
       <div className="text-center">
-        <p className="text-gray-900  text-xl flex justify-center font-medium mt-4 mb-1">
+        <p className="text-gray-900  text-xl flex justify-center font-medium mt-5 mb-1">
           {d.name}
         </p>
       </div>
-      <div className=" flex row space-x-5 justify-center mt-8">
+      <div className=" flex row space-x-5 justify-center mt-6">
        
         <a href={d.facebook}>
           <svg

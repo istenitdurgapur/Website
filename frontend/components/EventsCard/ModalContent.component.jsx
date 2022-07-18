@@ -8,53 +8,23 @@ const ModalContent = forwardRef(({ cardInfo, close }, ref) => {
       <div className={s.closeButton}>
         <button onClick={close}>&#10005;</button>
       </div>
-      <h1 className={s.title}> {cardInfo.title} </h1>
+      <h1 className={`${s.title} ${s.firstTitle}`}> {cardInfo.title} </h1>
       <div className={s.container}>
         <div className={s.image}>
           <img src={cardInfo.img} alt={cardInfo.title} />
         </div>
         <div className={s.description}>
-          <h2>Description :- </h2>
+        <h1 className={`${s.title} ${s.secondTitle}`}> {cardInfo.title} </h1>
           <p>{cardInfo.description}</p>
           <hr className={s.hr} />
           <div className={s.details}>
-            <h3 className={s.registration} >Registrations open from :- </h3>
-            <h3>Event start date :- {cardInfo.startDate}</h3>
-            <h3>Event end date :- {cardInfo.endDate}</h3>
+            <h3 className={s.registration} >Event Timeline :- </h3>
+            <h3>Start :- {cardInfo.startDate}</h3>
+            <h3>End :- {cardInfo.endDate}</h3>
             <button className={s.eventButton} > <a href={cardInfo.link} > Go To Event </a> </button>
           </div>
         </div>
       </div>
-      {/* <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil neque
-        explicabo deleniti, corrupti expedita repellendus aliquam fugit possimus
-        eaque nostrum?
-      </p>
-      <p>
-        Doloribus provident amet officiis in dolor voluptatum eligendi corrupti
-        quibusdam enim eos repellendus nobis odit et aliquid quod, laboriosam
-        harum!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil neque
-        explicabo deleniti, corrupti expedita repellendus aliquam fugit possimus
-        eaque nostrum?
-      </p>
-      <p>
-        Doloribus provident amet officiis in dolor voluptatum eligendi corrupti
-        quibusdam enim eos repellendus nobis odit et aliquid quod, laboriosam
-        harum!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil neque
-        explicabo deleniti, corrupti expedita repellendus aliquam fugit possimus
-        eaque nostrum?
-      </p>
-      <p>
-        Doloribus provident amet officiis in dolor voluptatum eligendi corrupti
-        quibusdam enim eos repellendus nobis odit et aliquid quod, laboriosam
-        harum!
-      </p> */}
     </div>
   );
 });
