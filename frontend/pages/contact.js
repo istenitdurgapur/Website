@@ -36,7 +36,7 @@ const Contact = () => {
         setMessage("");
         setSentmessage(" Message sent successfully");
        
-        setTimeout(() => setSentmessage(""), 1500);
+        setTimeout(() => setSentmessage(""), 2000);
       } else {
         setSentmessage("Please fill all the details ");
         setTimeout(() => setSentmessage(""), 1000);
@@ -244,10 +244,10 @@ const Contact = () => {
                   </div>
                   <div>
                   <div >{sentmessage ? <button class=" w-full text-white font-bold
-                                    bg-yellow-500
+                                    bg-purple-500
                                     rounded-full
                                     p-3
-                                    shadow-md" role="alert">
+                                    shadow-md transition-all duration-300" role="alert">
                     {sentmessage}
                   </button> : <button
                       type="submit"

@@ -138,7 +138,8 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES':('rest_framework.renderers.JSONRenderer',)
+    'DEFAULT_RENDERER_CLASSES':('rest_framework.renderers.JSONRenderer',),
+     'DATE_FORMAT': '%d-%m-%Y'
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

@@ -19,7 +19,7 @@ class gallerySerializer(serializers.ModelSerializer):
 class sponsersSerializer(serializers.ModelSerializer):
   class Meta:
     model = sponsers
-    fields = ['id','Image','link']
+    fields = ['id','Image','Link']
 
 
 class ContactSerializer(serializers.ModelSerializer):
