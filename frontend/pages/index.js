@@ -46,16 +46,15 @@ export default function Home({ sponsers }) {
             and other International Projects.
             <br /> <br />
             ISTE NIT Durgapur took birth on the auspicious occasion of Saraswati
-            Puja Day way back in February,1995 in our erstwhile called REC
+            Puja Day way back in February, 1995 in our erstwhile called REC
             Durgapur and is the Oldest Student Chapter of Eastern
-            India.Additionally,ISTE NIT Durgapur nominates projects and papers
+            India. Additionally, ISTE NIT Durgapur nominates projects and papers
             for the Indian Journal of Technical Education (IJTE) published by
-            the ISTE HQ,New Delhi on quarterly basis with the aim to provide an
-            appropriate platform presenting well
-            considered,meaningful,constructively thought provoking,non-political
+            the ISTE HQ, New Delhi on quarterly basis with the aim to provide an
+            appropriate platform presenting well considered, meaningful, constructively thought provoking, non-political
             and non-conventional but critically analysing and synthesizing
             present and future aspects of the technical education system
-            supported with meaningful suggestions for solutions,refinement and
+            supported with meaningful suggestions for solutions, refinement and
             innovation.
           </p>
         </section>
@@ -113,13 +112,13 @@ export default function Home({ sponsers }) {
         </section>
 
         <section className={s.sponsers}>
-          <Tiltle title="OUR SPONSERS" font="36" margin="45" />
+          <Tiltle title="OUR SPONSERS" font="36" margin="60" />
           <div className={s.slider}>
             <div className={s.slideTrack}>
               {sponsers.map((data) => {
                 return (
                   <div key={data.id} className={s.slide}>
-                    <img src={data.Image} height="100" width="100" alt="" />
+                    <img src={data.Image} height="150" width="150" alt="" />
                   </div>
                 );
               })}

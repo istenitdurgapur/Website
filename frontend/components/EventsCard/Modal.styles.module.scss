@@ -19,6 +19,20 @@
   @media only screen and (max-width: 800px) {
     font-size: 28px;
   }
+  h3{
+    font-size: 18px;
+  }
+}
+.headDetails{
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @media only screen and (max-width: 800px) {
+    width: 60%;
+  }
 }
 .firstTitle {
   display: none;
