@@ -66,7 +66,7 @@ export default function Home({ sponsers }) {
         </section>
 
         <section className={s.faculty}>
-          <Tiltle title="FACULTY ADVISORS" font="36" margin="30" />
+          <Tiltle title="FACULTY ADVISORS" font="34" margin="30" />
           <div className={s.wrapper}>
             <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>

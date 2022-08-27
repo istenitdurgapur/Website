@@ -28,7 +28,7 @@ function TeamSection({ teams, title, year }) {
   return (
     <div className="flex-col  justify-center items-center">
       <Tiltle title={title} font="30" margin="45" />
-      <div className="flex flex-wrap justify-center items-center w-full ">
+      <div className="flex flex-wrap justify-center items-center w-full mb-4">
         {data.map(function (d, i) {
           return (
             <TeamCard d={d} key={i} />

@@ -139,7 +139,7 @@ CORS_ALLOWED_ORIGINS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES':('rest_framework.renderers.JSONRenderer',),
-     'DATETIME_FORMAT': " %d %b %Y %H:%M",
+     'DATETIME_FORMAT': "%d %b %Y",
     
 }
 

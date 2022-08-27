@@ -28,7 +28,7 @@ function AlumniSection({ alumni, year }) {
     <div className="flex-col  justify-center items-center ">
       {data.length > 0 && <>
         <Tiltle title={`${year} BATCH`} font="30" margin="45" />
-        <div className="flex flex-wrap justify-center items-center w-full ">
+        <div className="flex flex-wrap justify-center items-center w-full mb-4">
           {data.map(function (d, i) {
             return (
               <AlumniCard d={d} key={i} />

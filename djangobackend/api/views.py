@@ -14,14 +14,14 @@ from django.conf import settings
 
 
 class StudentList(ListAPIView):
-    # queryset = Student.objects.all()
+    queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
-    def get_queryset(self):
-      final = Student.objects.all().filter(year__gte=4)
-      others = Student.objects.all()
+    # def get_queryset(self):
+    #   final = Student.objects.all().filter(year__gte=4)
+    #   others = Student.objects.all()
 
-      return final.union(others, all=True)
+    #   return final.union(others, all=True)
 
 
 class AlumniList(ListAPIView):
