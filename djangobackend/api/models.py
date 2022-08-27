@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 from django.db import models
 
 # Create your models here.
@@ -31,9 +31,8 @@ class Alumni(models.Model):
 class Event(models.Model):
   EventName = models.CharField(max_length=100)
   Image=models.ImageField(upload_to='images/Events')
-  StartDate = models.DateField(default=0)
-  EndDate = models.DateField(default=0)
-  time=models.TimeField(default=datetime.time(datetime.now()))
+  StartDate = models.DateTimeField(default=datetime.date.today())
+  EndDate = models.DateTimeField(default=datetime.date.today())
   Location = models.CharField(max_length=500,blank=True)
   Link = models.CharField(max_length=5000,blank=True,default=" ")
   Description = models.CharField(max_length=5000,blank=True)
@@ -52,11 +51,11 @@ class sponsers(models.Model):
 
 
 
-class Contact(models.Model):
-  name = models.CharField(max_length=100)
-  phone = models.IntegerField(default=0)
-  email = models.EmailField()
-  message = models.CharField(max_length=5000,blank=True)
+# class Contact(models.Model):
+#   name = models.CharField(max_length=100)
+#   phone = models.IntegerField(default=0)
+#   email = models.EmailField()
+#   message = models.CharField(max_length=5000,blank=True)
   
-  def __str__(self):
-         return self.name
+#   def __str__(self):
+#          return self.name
