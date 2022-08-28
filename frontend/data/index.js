@@ -14,11 +14,11 @@ const navigation = [
     name: "Team",
     slug: "team"
   },
-  {
-    id: "2fa83d93-e460-4298-a07d-70d0b36427",
-    name: "Alumni",
-    slug: "alumni"
-  },
+  // {
+  //   id: "2fa83d93-e460-4298-a07d-70d0b36427",
+  //   name: "Alumni",
+  //   slug: "alumni"
+  // },
   {
     id: "2fa83d93-e460-4298-a07d-70d0b3642398",
     name: "Contact",

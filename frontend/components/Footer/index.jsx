@@ -12,7 +12,7 @@ function Footer() {
               ISTE STUDENTS &#39; CHAPTER <br></br> NIT DURGAPUR
             </h4>
             <ul className={s.ul1}>
-              <li>Made with 💖 by WEBD Team</li>
+              {/* <li>Made with 💖 by WEBD Team</li> */}
               <li>© 2022 ISTE. All Rights Reserved. </li>
             </ul>
           </div>
@@ -27,7 +27,7 @@ function Footer() {
                 >
                   <path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z" />
                 </svg>
-                <a href="#">NIT Durgapur</a>
+                <a href="https://goo.gl/maps/pLPbYVaBqDfMKEkf8">NIT Durgapur</a>
               </li>
               <li className="flex items-center">
                 <svg
@@ -43,11 +43,11 @@ function Footer() {
                 <svg
                   className="h-4 mr-2 fill-white"
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
+                  viewBox="0 0 500 500"
                 >
                   <path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
                 </svg>
-                <a href="#">istenitdurgapur@gmail.com</a>
+                <a href="mailto:istenitdurgapur@gmail.com">istenitdurgapur@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -80,7 +80,7 @@ function Footer() {
             <h4>follow us</h4>
             <div className="flex  space-x-4 md:space-x-1 lg:space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/istenitdgp/"
                 className="p-2 rounded-full bg-gray-500 transition-all duration-300 hover:bg-white group"
               >
                 <svg
@@ -98,7 +98,7 @@ function Footer() {
                 <svg  className="w-5 h-5 text-white group-hover:text-blue-500 fill-current  " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" /></svg>
               </a> */}
               <a
-                href="#"
+                href="https://www.instagram.com/istenitdgp/"
                 className="p-2 rounded-full bg-gray-500 transition-all duration-300 hover:bg-white group"
               >
                 <svg
@@ -110,7 +110,7 @@ function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/istenitdgp/"
                 className="p-2 rounded-full bg-gray-500 transition-all duration-300 hover:bg-white group"
               >
                 <svg

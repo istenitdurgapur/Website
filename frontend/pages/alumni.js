@@ -10,32 +10,48 @@ function Alumni({alumni}) {
   const styles = {
     marginTop : "120px"
   }
-  
+  const headerStyle = {
+    display : "flex",
+    width : "45%",
+    marginRight : "auto",
+    marginLeft : "auto",
+    alignItems : "center",
+    justifyContent : "space-between"
+  }
   
    // loader screen 
-   const [spinner, setSpinner] = useState(true);
+  //  const [spinner, setSpinner] = useState(true);
 
    // It will be executed before rendering
  
-   useEffect(() => {
-     setTimeout(() => setSpinner(false), 500)
-   }, []);
+  //  useEffect(() => {
+  //    setTimeout(() => setSpinner(false), 0)
+  //  }, []);
  
-   // [] means like componentDidMount
- 
- 
- 
-   return spinner ? (
-     <div>
-     <Loader/>
-     </div>
-   ) :
+  //  // [] means like componentDidMount
  
  
-  (
+ 
+  //  return spinner ? (
+  //    <div>
+  //    <Loader/>
+  //    </div>
+  //  ) :
+ 
+ 
+  // (
+    return (
     <div style={styles} >
       <Header items={navigation} navPosition="right" home={false} />
-      <Title title="OUR ALUMNI" font="45" margin="60" />
+      <div className="flex justify-center align-center text-center ">
+        <a href="/team">
+          <h1 className=" text-3xl font-semibold flex text-center items-center justify-center" >TEAM</h1>
+        </a>
+        <h1 className="text-2xl flex items-center justify-center mx-6"> / </h1>
+        <a href="/alumni">
+        <h1 className="text-blue-600 text-3xl font-semibold flex text-center items-center justify-center underline decoration-1 decoration-black underline-offset-8" >ALUMNI</h1>
+        </a>
+      </div>
       
       <AlumniSection alumni={alumni}  year={2020} />
       <AlumniSection alumni={alumni} year={2021} />
