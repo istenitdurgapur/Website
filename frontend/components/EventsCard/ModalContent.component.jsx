@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import s from "./Modal.styles.module.scss";
 
 const ModalContent = forwardRef(({ cardInfo, close }, ref) => {
-  console.log(cardInfo);
+  // console.log(cardInfo);
   return (
     <div className="modal-content-container" ref={ref}>
       <div className={s.closeButton}>
@@ -12,8 +12,8 @@ const ModalContent = forwardRef(({ cardInfo, close }, ref) => {
         <h1> {cardInfo.title} </h1>
         <div className={s.headDetails}>
           <h3>{cardInfo.startDate}</h3>
-          <h3> - </h3>
-          <h3> {cardInfo.endDate}</h3>
+          {/* <h3> - </h3>
+          <h3> {cardInfo.endDate}</h3> */}
         </div>
       </div>
       <div className={s.container}>
@@ -25,8 +25,8 @@ const ModalContent = forwardRef(({ cardInfo, close }, ref) => {
             <h1> {cardInfo.title} </h1>
             <div className={s.headDetails}>
               <h3>{cardInfo.startDate}</h3>
-              <h3> - </h3>
-              <h3> {cardInfo.endDate}</h3>
+              {/* <h3> - </h3>
+              <h3> {cardInfo.endDate}</h3> */}
             </div>
           </div>
 

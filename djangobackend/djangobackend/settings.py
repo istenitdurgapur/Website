@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -139,7 +139,7 @@ CORS_ALLOWED_ORIGINS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES':('rest_framework.renderers.JSONRenderer',),
-     'DATETIME_FORMAT': "%d %b %Y",
+     'DATETIME_FORMAT': "%d %b %Y |  %I:%M %p",
     
 }
 
