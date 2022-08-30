@@ -7,13 +7,13 @@
   position: relative;
 }
 .heroImageContainer {
-  background-image: url("/HERO.jpg");
+  background: url("/HERO.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   @media screen and (max-width: 576px) {
-    background-image: url("/MOB_HERO.jpg");
+    background: url("/MOB_HERO.jpg");
   }
 }
 .about {
@@ -88,7 +88,7 @@
       margin-bottom: 100px;
     }
     @media screen and (max-width: 576px) {
-      height: 180px;
+      height: 190px;
     }
 
     &.active {
