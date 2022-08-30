@@ -1,4 +1,4 @@
-const api = "http://127.0.0.1:8000";
+const api = "https://istenitdgp.pythonanywhere.com";
 const apiLinks = {
     gallery : `${api}/api/gallery/`,
     sponsers : `${api}/api/sponsers/`,
