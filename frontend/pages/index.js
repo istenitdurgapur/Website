@@ -7,18 +7,24 @@ import Carousels from "../components/Carousel/Carousels";
 import Tiltle from "../components/Title";
 import Loader from "../components/loader/Loader";
 
-export default function Home({ sponsers }) {
+import apiLinks from "../data/apiLink";
+
+export default function Home() {
   const [data, setData] = useState([]);
+  const [sponsers, setSponsers] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://127.0.0.1:8000/api/gallery/")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      });
+
+    Promise.all([
+      fetch(`${apiLinks.gallery}`).then(gallery => gallery.json()),
+      fetch(`${apiLinks.sponsers}`).then(spons => spons.json()),
+    ]).then(([gallery, spons]) => {
+      setData(gallery);
+      setSponsers(spons);
+      setLoading(false);
+    });
   }, []);
 
   if (!data) return <p>Backend have some problem check your api</p>;
@@ -47,15 +53,15 @@ export default function Home({ sponsers }) {
             <br /> <br />
             ISTE NIT Durgapur took birth on the auspicious occasion of Saraswati
             Puja Day way back in February, 1995 in our erstwhile called REC
-            Durgapur and is the Oldest Student Chapter of Eastern
-            India. Additionally, ISTE NIT Durgapur nominates projects and papers
-            for the Indian Journal of Technical Education (IJTE) published by
-            the ISTE HQ, New Delhi on quarterly basis with the aim to provide an
-            appropriate platform presenting well considered, meaningful, constructively thought provoking, non-political
-            and non-conventional but critically analysing and synthesizing
-            present and future aspects of the technical education system
-            supported with meaningful suggestions for solutions, refinement and
-            innovation.
+            Durgapur and is the Oldest Student Chapter of Eastern India.
+            Additionally, ISTE NIT Durgapur nominates projects and papers for
+            the Indian Journal of Technical Education (IJTE) published by the
+            ISTE HQ, New Delhi on quarterly basis with the aim to provide an
+            appropriate platform presenting well considered, meaningful,
+            constructively thought provoking, non-political and non-conventional
+            but critically analysing and synthesizing present and future aspects
+            of the technical education system supported with meaningful
+            suggestions for solutions, refinement and innovation.
           </p>
         </section>
         <section className={s.gallery}>
@@ -131,16 +137,16 @@ export default function Home({ sponsers }) {
   );
 }
 
-export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  const res = await fetch("http://127.0.0.1:8000/api/sponsers/");
-  const sponsers = await res.json();
+// export async function getStaticProps() {
+//   // Call an external API endpoint to get posts.
+//   const res = await fetch("http://127.0.0.1:8000/api/sponsers/");
+//   const sponsers = await res.json();
 
-  // By returning { props: { events } }, the component
-  // will receive `events` as a prop at build time
-  return {
-    props: {
-      sponsers,
-    },
-  };
-}
+//   // By returning { props: { events } }, the component
+//   // will receive `events` as a prop at build time
+//   return {
+//     props: {
+//       sponsers,
+//     },
+//   };
+// }

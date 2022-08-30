@@ -1,9 +1,12 @@
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import navigation from "../data";
 import Footer from "../components/Footer";
 import Loader from "../components/loader/Loader";
 import Tiltle from "../components/Title";
-import { useEffect, useState } from "react";
+
+import contactDetails from "../data/contact";
+import apiLinks from "../data/apiLink";
 
 const Contact = () => {
 
@@ -19,7 +22,7 @@ const Contact = () => {
     e.preventDefault();
     setSending(true);
     try {
-      let res = await fetch("http://127.0.0.1:8000/api/contact", {
+      let res = await fetch(`${apiLinks.contact}`, {
         method: "POST",
         body: JSON.stringify({
           name: name,
@@ -125,13 +128,13 @@ const Contact = () => {
                 <p className="text-base  font-normal text-body-color leading-relaxed  ">
                   Harshit Surana :
                   <span className="font-normal text-[#0076fe] italic">
-                    +91 980-006-2969
+                    {contactDetails.mobile.chairperson}
                   </span>
                 </p>
                 <p className="text-base  font-normal leading-relaxed  mb-9 ">
                   Ritabrata Ganguly :
                   <span className="font-normal text-[#0076fe] italic">
-                    +91 980-006-2969
+                    {contactDetails.mobile.viceChairperson}
                   </span>
                 </p>
                 <div className="flex items-center  text-center mb-4 ">
@@ -151,7 +154,7 @@ const Contact = () => {
                   </p>
                 </div>
                 <p className="text-base  font-normal text-[#0076fe] italic leading-relaxed ">
-                  istenitdurgapur@gmail.com
+                  {contactDetails.email}
                 </p>
               </div>
             </div>

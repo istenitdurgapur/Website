@@ -9,7 +9,20 @@ import TeamSection from "../components/Teams/TeamSection";
 import Loader from "../components/loader/Loader";
 import Link from "next/link";
 
-function Team({ teams }) {
+import apiLinks from "../data/apiLink";
+
+function Team() {
+
+  const [teams, setTeams] = useState([]);
+
+  useEffect(() => {
+    fetch(`${apiLinks.teams}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setTeams(data);
+      });
+  }, []);
+
   // loader screen
   // const [spinner, setSpinner] = useState(true);
 
@@ -49,16 +62,16 @@ function Team({ teams }) {
 
 export default Team;
 
-export async function getStaticProps() {
-  const res = await fetch("http://127.0.0.1:8000/api/student/");
-  const teams = await res.json();
-  // const res2 = await fetch("http://127.0.0.1:8000/api/alumni/");
-  // const alumni = await res2.json();
+// export async function getStaticProps() {
+//   const res = await fetch("http://13.127.85.83/api/student/");
+//   const teams = await res.json();
+//   // const res2 = await fetch("http://127.0.0.1:8000/api/alumni/");
+//   // const alumni = await res2.json();
 
-  return {
-    props: {
-      teams,
-      // alumni,
-    },
-  };
-}
+//   return {
+//     props: {
+//       teams,
+//       // alumni,
+//     },
+//   };
+// }

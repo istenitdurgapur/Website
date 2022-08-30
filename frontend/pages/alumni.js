@@ -5,8 +5,20 @@ import Footer from '../components/Footer';
 import AlumniSection from "../components/Alumni/AlumniSection";
 import Link from "next/link";
 import Loader from "../components/loader/Loader";
+import apiLinks from "../data/apiLink";
 
-function Alumni({alumni}) {
+function Alumni() {
+
+  const [alumni, setAlumni] = useState([]);
+
+  useEffect(() => {
+    fetch(`${apiLinks.alumni}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setAlumni(data);
+      });
+  }, []);
+
   const styles = {
     marginTop : "120px"
   }
@@ -83,13 +95,13 @@ function Alumni({alumni}) {
 export default Alumni;
 
 
-export async function getStaticProps() {
-  const res = await fetch("http://127.0.0.1:8000/api/alumni/");
-  const alumni = await res.json();
+// export async function getStaticProps() {
+//   const res = await fetch("http://127.0.0.1:8000/api/alumni/");
+//   const alumni = await res.json();
 
-  return {
-    props: {
-      alumni,
-    },
-  };
-}
+//   return {
+//     props: {
+//       alumni,
+//     },
+//   };
+// }

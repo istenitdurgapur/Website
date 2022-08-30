@@ -8,7 +8,22 @@ import EventCard from "../components/EventsCard";
 import Modal from "../components/EventsCard/Modal.component";
 import Loader from "../components/loader/Loader";
 
-const Events = ({ events, ...otherProps }) => {
+import apiLinks from "../data/apiLink";
+
+const Events = ({ ...otherProps }) => {
+
+  const [events, setEvents] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`${apiLinks.events}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setEvents(data);
+        setLoading(false);
+      });
+  }, []);
  
   //animation code
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -23,20 +38,14 @@ const Events = ({ events, ...otherProps }) => {
     setIsModalVisible(false);
   };
 
-   // loader screen 
-   const [spinner, setSpinner] = useState(true);
-
    // It will be executed before rendering
  
-   useEffect(() => {
-     setTimeout(() => setSpinner(false), 500)
-   }, []);
  
    // [] means like componentDidMount
  
  
  
-   return spinner ? (
+   return isLoading ? (
      <div>
      <Loader/>
      </div>
@@ -82,18 +91,18 @@ const Events = ({ events, ...otherProps }) => {
   );
 };
 
-export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  const res = await fetch("http://127.0.0.1:8000/api/events/");
-  const events = await res.json();
+// export async function getStaticProps() {
+//   // Call an external API endpoint to get posts.
+//   const res = await fetch("http://127.0.0.1:8000/api/events/");
+//   const events = await res.json();
 
-  // By returning { props: { events } }, the component
-  // will receive `events` as a prop at build time
-  return {
-    props: {
-      events,
-    },
-  };
-}
+//   // By returning { props: { events } }, the component
+//   // will receive `events` as a prop at build time
+//   return {
+//     props: {
+//       events,
+//     },
+//   };
+// }
 
 export default Events;
