@@ -1,4 +1,4 @@
-const api = "https://backend.istenitdgp.com/";
+const api = "https://backend.istenitdgp.com";
 const apiLinks = {
     gallery : `${api}/api/gallery/`,
     sponsers : `${api}/api/sponsers/`,
