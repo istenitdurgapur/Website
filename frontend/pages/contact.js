@@ -32,7 +32,7 @@ const Contact = () => {
         }),
       });
       let resJson = await res.json();
-      if (res.status === 201 || res.status === 202 || res.status === 302) {
+      if (res.status ===201) {
         setName("");
         setEmail("");
         setPhone("");
@@ -40,7 +40,8 @@ const Contact = () => {
         setSentmessage(" Message sent successfully");
        
         setTimeout(() => setSentmessage(""), 1000);
-      } else {
+      } 
+      else {
         setSentmessage("Please fill all the details ");
         setTimeout(() => setSentmessage(""), 1000);
       }

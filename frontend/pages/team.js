@@ -44,11 +44,11 @@ function Team() {
       <Header items={navigation} navPosition="right" home={false} />
       <div className="flex justify-center align-center text-center ">
         <Link href="/team">
-          <h1 className=" text-blue-600 text-3xl font-semibold flex text-center items-center justify-center underline decoration-1 decoration-black underline-offset-8" >TEAM</h1>
+          <h1 className="cursor-pointer text-blue-600 text-3xl font-semibold flex text-center items-center justify-center underline decoration-1 decoration-black underline-offset-8" >TEAM</h1>
         </Link>
         <h1 className="text-2xl flex items-center justify-center mx-6"> / </h1>
         <Link href="/alumni">
-        <h1 className=" text-3xl font-semibold flex text-center items-center justify-center" >ALUMNI</h1>
+        <h1 className="cursor-pointer text-3xl font-semibold flex text-center items-center justify-center" >ALUMNI</h1>
         </Link>
       </div>
       <TeamSection teams={teams} title="OFFICE BEARERS" year={4} />

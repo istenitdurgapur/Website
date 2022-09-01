@@ -4,8 +4,8 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 from django.http.response import JsonResponse
 from django.shortcuts import render
-from .models import Alumni, Event, Student, gallery, sponsers
-from .serializers import AlumniSerializer, EventsSerializer, StudentSerializer, gallerySerializer, sponsersSerializer
+from .models import Alumni, Event, Student, gallery, sponsers , Contact
+from .serializers import AlumniSerializer, EventsSerializer, StudentSerializer, gallerySerializer, sponsersSerializer , ContactSerializer
 from rest_framework.generics import ListAPIView
 from django.core.mail import send_mail
 from django.conf import settings

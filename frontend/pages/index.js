@@ -12,7 +12,7 @@ import apiLinks from "../data/apiLink";
 export default function Home() {
   const [data, setData] = useState([]);
   const [sponsers, setSponsers] = useState([]);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
