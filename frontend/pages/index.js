@@ -83,7 +83,7 @@ export default function Home() {
                   Dr. Anita Pal <br />{" "}
                   <span className={s.profileCard__name__designation}>
                     {" "}
-                    CHIEF-FACULTY ADVISOR{" "}
+                    CHIEF-FACULTY ADVISOR{" "} 
                   </span>
                 </div>
                 <div className={s.profileCard__txt}>
@@ -136,6 +136,11 @@ export default function Home() {
     </div>
   );
 }
+
+
+
+
+
 
 // export async function getStaticProps() {
 //   // Call an external API endpoint to get posts.

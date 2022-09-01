@@ -17,15 +17,15 @@ function AlumniCard({d}) {
       />
 
       <div className="text-center">
-        <p className="text-gray-900  text-xl flex justify-center font-medium mt-5 mb-1">
+        <p className="text-gray-900  text-xl flex justify-center font-medium mt-2 mb-1">
           {d.name}
         </p>
       </div>
-      <div className=" flex row space-x-5 justify-center mt-6">
+      <div className=" flex row space-x-5 justify-center mt-5">
        
         <a href={d.facebook}>
           <svg
-            className="w-5 h-5 text-blue-600 hover:text-blue-700 fill-current transition-all duration-500 group-hover:scale-110 group-hover:m-1 hover:-translate-y-1 "
+            className="w-5 h-5 text-blue-600 hover:text-blue-700 fill-current transition-all duration-500 group-hover:scale-105 group-hover:m-1 hover:-translate-y-1 "
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -34,7 +34,7 @@ function AlumniCard({d}) {
         </a>
         <a href={d.instagram}>
           <svg
-            className="w-5 h-5 text-red-600 hover:text-red-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
+            className="w-5 h-5 text-red-600 hover:text-red-700 fill-current transition-all duration-500 group-hover:scale-105 group-hover:m-1 hover:-translate-y-1 "
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
           >
@@ -43,7 +43,7 @@ function AlumniCard({d}) {
         </a>
         <a href={d.linkedin}>
           <svg
-            className="w-5 h-5 text-indigo-600 hover:text-indigo-700 fill-current transition-all duration-500 group-hover:scale-125 group-hover:m-1 hover:-translate-y-1 "
+            className="w-5 h-5 text-indigo-600 hover:text-indigo-700 fill-current transition-all duration-500 group-hover:scale-105 group-hover:m-1 hover:-translate-y-1 "
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
           >
