@@ -4,9 +4,9 @@ const nextConfig = {
   images: {
     domains: [
       "127.0.0.1",
-      "http://13.127.85.83",
-      "https://backend.istenitdgp.com",
-      "https://istenitdgp.pythonanywhere.com"
+      "13.127.85.83",
+      "backend.istenitdgp.com",
+      "istenitdgp.pythonanywhere.com"
     ],
   },
 }
