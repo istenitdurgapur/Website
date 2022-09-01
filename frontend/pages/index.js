@@ -18,8 +18,8 @@ export default function Home() {
     setLoading(true);
 
     Promise.all([
-      fetch(`${apiLinks.gallery}`).then(gallery => gallery.json()),
-      fetch(`${apiLinks.sponsers}`).then(spons => spons.json()),
+      fetch(`${apiLinks.gallery}`).then((gallery) => gallery.json()),
+      fetch(`${apiLinks.sponsers}`).then((spons) => spons.json()),
     ]).then(([gallery, spons]) => {
       setData(gallery);
       setSponsers(spons);
@@ -83,7 +83,7 @@ export default function Home() {
                   Dr. Anita Pal <br />{" "}
                   <span className={s.profileCard__name__designation}>
                     {" "}
-                    CHIEF-FACULTY ADVISOR{" "} 
+                    CHIEF-FACULTY ADVISOR{" "}
                   </span>
                 </div>
                 <div className={s.profileCard__txt}>
@@ -120,15 +120,21 @@ export default function Home() {
         <section className={s.sponsers}>
           <Tiltle title="OUR SPONSERS" font="36" margin="60" />
           <div className={s.slider}>
-            <div className={s.slideTrack}>
-              {sponsers.map((data) => {
-                return (
-                  <div key={data.id} className={s.slide}>
-                    <img src={data.Image} height="150" width="150" alt="" />
-                  </div>
-                );
-              })}
-            </div>
+            {sponsers.map((data) => {
+              return (
+                <div key={data.id}>
+                  <img src={data.Image} height="150" width="150" alt="" />
+                </div>
+              );
+            })}
+
+            {sponsers.map((data) => {
+              return (
+                <div key={data.id}>
+                  <img src={data.Image} height="150" width="150" alt="" />
+                </div>
+              );
+            })}
           </div>
         </section>
       </div>
@@ -136,11 +142,6 @@ export default function Home() {
     </div>
   );
 }
-
-
-
-
-
 
 // export async function getStaticProps() {
 //   // Call an external API endpoint to get posts.
