@@ -22,7 +22,7 @@ const Contact = () => {
     e.preventDefault();
     setSending(true);
     try {
-      let res = await fetch(`${apiLinks.contact}`, {
+      let res = await fetch(`https://istenitdgp.pythonanywhere.com/api/contact`, {
         method: "POST",
         body: JSON.stringify({
           name: name,
