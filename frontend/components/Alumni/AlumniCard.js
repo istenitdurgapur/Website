@@ -7,7 +7,7 @@ function AlumniCard({d}) {
       <Image
         className="rounded-t-2xl"
         src={d.image}
-        layout="responsive"
+        layout="fixed"
         height={290}
         width={250}
         objectFit="cover"
