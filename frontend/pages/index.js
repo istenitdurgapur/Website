@@ -6,6 +6,7 @@ import navigation from "../data";
 import Carousels from "../components/Carousel/Carousels";
 import Tiltle from "../components/Title";
 import Loader from "../components/loader/Loader";
+import Head from "next/head"
 
 import apiLinks from "../data/apiLink";
 
@@ -35,6 +36,24 @@ export default function Home() {
     </div>
   ) : (
     <div>
+      <Head>
+        <title>ISTE | NITDGP</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta
+          name="description"
+          content="ISTE Students' Chapter NIT Durgapur"
+        />
+        <meta
+          name="keywords"
+          content="ISTE,NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR,NIT Durgapur clubs,NIT Durgapur Society,ISTE Students' Chapter"
+        />
+        <meta name="author" content="Harshit Surana@istenitdgp" />
+      </Head>
       <Header items={navigation} navPosition="right" home={true} />
       <section className={s.hero}>
         <div className={s.heroImageContainer}></div>
@@ -123,7 +142,7 @@ export default function Home() {
             {sponsers.map((data) => {
               return (
                 <div key={data.id}>
-                  <img src={data.Image}  alt="image" />
+                  <img src={data.Image} alt="image" />
                 </div>
               );
             })}
