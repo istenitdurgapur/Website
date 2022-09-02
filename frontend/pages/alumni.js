@@ -6,7 +6,6 @@ import AlumniSection from "../components/Alumni/AlumniSection";
 import Link from "next/link";
 import Loader from "../components/loader/Loader";
 import apiLinks from "../data/apiLink";
-import Head from "next/head"
 
 function Alumni() {
   const [alumni, setAlumni] = useState([]);
@@ -51,24 +50,6 @@ function Alumni() {
   // (
   return (
     <div style={styles}>
-       <Head>
-        <title>Our Alumni | ISTE</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
-        <meta
-          name="description"
-          content="ISTE Students' Chapter NIT Durgapur"
-        />
-        <meta
-          name="keywords"
-          content="ISTE,NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR,NIT Durgapur clubs,NIT Durgapur Society,ISTE Students' Chapter"
-        />
-        <meta name="author" content="Harshit Surana@istenitdgp" />
-      </Head>
       <Header items={navigation} navPosition="right" home={false} />
       <div className="flex justify-center align-center text-center ">
         <Link href="/team">

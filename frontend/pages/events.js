@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 import EventCard from "../components/EventsCard";
 import Modal from "../components/EventsCard/Modal.component";
 import Loader from "../components/loader/Loader";
-import Head from "next/head"
 
 import apiLinks from "../data/apiLink";
 
@@ -52,24 +51,6 @@ const Events = ({ ...otherProps }) => {
      </div>
    ) :(
     <div className={s.container}>
-       <Head>
-        <title>Events | ISTE</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
-        <meta
-          name="description"
-          content="ISTE Students' Chapter NIT Durgapur"
-        />
-        <meta
-          name="keywords"
-          content="ISTE,NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR,NIT Durgapur clubs,NIT Durgapur Society,ISTE Students' Chapter"
-        />
-        <meta name="author" content="Harshit Surana@istenitdgp" />
-      </Head>
       <div>
         <Header items={navigation} navPosition="right" home={false} />
 
