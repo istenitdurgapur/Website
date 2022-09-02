@@ -219,7 +219,7 @@
 
 .slider {
    
-  $min-image-size: 50px;
+  $min-image-size: 90px;
   $max-image-size: 100px;
   
   --image-size: #{$max-image-size};
@@ -240,7 +240,7 @@
 	div { 
 		display: flex;
 		position: relative;
-		animation: marquee 10s linear infinite;
+		animation: marquee 20s linear infinite;
     justify-content: space-around;
     // min-width:100%;
     
@@ -264,5 +264,5 @@
 
 @keyframes marquee {
 	0%   { transform: translateX(0%); }
-	100% { transform: translateX(-100%); }
+	100% { transform: translateX(-500%); }
 }

@@ -123,7 +123,7 @@ export default function Home() {
             {sponsers.map((data) => {
               return (
                 <div key={data.id}>
-                  <img src={data.Image} height="150" width="150" alt="" />
+                  <img src={data.Image}  alt="image" />
                 </div>
               );
             })}
@@ -131,7 +131,7 @@ export default function Home() {
             {sponsers.map((data) => {
               return (
                 <div key={data.id}>
-                  <img src={data.Image} height="150" width="150" alt="" />
+                  <img src={data.Image} height="150" width="150" alt="image" />
                 </div>
               );
             })}
