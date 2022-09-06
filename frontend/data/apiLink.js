@@ -1,5 +1,5 @@
-const api = "https://backend.istenitdgp.com";
-// const api = "http://127.0.0.1:8000";
+// const api = "https://backend.istenitdgp.com";
+const api = "http://127.0.0.1:8000";
 
 const apiLinks = {
     gallery : `${api}/api/gallery/`,
