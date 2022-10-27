@@ -50,17 +50,16 @@
 .footerCol ul li:not(:last-child){
 	margin-bottom: 10px;
 }
-.footerCol ul li a{
+.footerCol ul li a , .footerCol ul li p{
 	font-size: 16px;
 	text-transform: capitalize;
-	color: #ffffff;
 	text-decoration: none;
 	font-weight: 300;
 	color: rgba(255, 254, 250 , 0.8);
 	display: block;
 	transition: all 0.3s ease;
 }
-.footerCol ul li a:hover{
+.footerCol ul li a:hover , .footerCol ul li p:hover{
 	color: #ffffff;
 	padding-left: 8px;
 }

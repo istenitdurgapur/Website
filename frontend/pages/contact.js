@@ -7,16 +7,15 @@ import Tiltle from "../components/Title";
 
 import contactDetails from "../data/contact";
 import apiLinks from "../data/apiLink";
+import Head from "next/head";
 
 const Contact = () => {
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [sentmessage, setSentmessage] = useState("");
   const [sending, setSending] = useState(false);
-
 
   let handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,16 +31,15 @@ const Contact = () => {
         }),
       });
       let resJson = await res.json();
-      if (res.status ===201) {
+      if (res.status === 201) {
         setName("");
         setEmail("");
         setPhone("");
         setMessage("");
         setSentmessage(" Message sent successfully");
-       
+
         setTimeout(() => setSentmessage(""), 1000);
-      } 
-      else {
+      } else {
         setSentmessage("Please fill all the details ");
         setTimeout(() => setSentmessage(""), 1000);
       }
@@ -51,8 +49,6 @@ const Contact = () => {
     setSending(false);
   };
 
-
-
   // loader screen
   const [spinner, setSpinner] = useState(true);
 
@@ -60,9 +56,7 @@ const Contact = () => {
 
   useEffect(() => {
     setTimeout(() => setSpinner(false), 1000);
-  
   }, []);
-  
 
   // [] means like componentDidMount
   const font = {
@@ -75,6 +69,27 @@ const Contact = () => {
     </div>
   ) : (
     <div>
+      <Head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        {/* <!-- The above 3 meta tags *must* come first in the head --> */}
+
+        {/* <!-- SITE TITLE --> */}
+        <title>CONTACT US | ISTE NITDGP</title>
+        <meta
+          name="description"
+          content="ISTE Students' Chapter NIT Durgapur"
+        />
+        <meta
+          name="keywords"
+          content="ISTE,NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR,NIT Durgapur clubs,NIT Durgapur Society,ISTE Students' Chapter"
+        />
+        <meta name="author" content="Abhishek Krishna@istenitdgp" />
+      </Head>
       <Header items={navigation} navPosition="right" home={false} />
       <section
         className="py-10 px-4 lg:px-16 overflow-hidden relative z-10 mt-[80px]"
@@ -108,7 +123,8 @@ const Contact = () => {
                 </div>
 
                 <p className="text-base  font-normal leading-relaxed mb-9">
-                  National Institute of Technology Durgapur , West Bengal , India
+                  National Institute of Technology Durgapur , West Bengal ,
+                  India
                 </p>
                 <div className="flex items-center text-center mb-4 ">
                   <svg
@@ -167,7 +183,6 @@ const Contact = () => {
             >
               <div className="bg-gray-100 border-2 relative rounded-lg p-8 sm:p-12 shadow-lg">
                 <form onSubmit={handleSubmit}>
-                 
                   <div className="mb-6">
                     <input
                       type="text"
@@ -247,25 +262,32 @@ const Contact = () => {
                     ></textarea>
                   </div>
                   <div>
-                  <div >{sentmessage ? <button className=" w-full text-white font-bold
+                    <div>
+                      {sentmessage ? (
+                        <button
+                          className=" w-full text-white font-bold
                                     bg-yellow-500
                                     rounded-full
                                     p-3
-                                    shadow-md" role="alert">
-                    {sentmessage}
-                  </button> : <button
-                      type="submit"
-                      className=" w-full text-white font-bold
+                                    shadow-md"
+                          role="alert"
+                        >
+                          {sentmessage}
+                        </button>
+                      ) : (
+                        <button
+                          type="submit"
+                          className=" w-full text-white font-bold
                                     bg-[#0076fe]
                                     rounded-full
                                     p-3
                                     shadow-md
                                     "
-                    >
-                    {sending ?  "Sending ...":"Send Message"} 
-                    </button>}</div>
-                   
-
+                        >
+                          {sending ? "Sending ..." : "Send Message"}
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </form>
                 <div></div>
@@ -278,6 +300,6 @@ const Contact = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default Contact;

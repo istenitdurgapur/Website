@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
 import s from "../styles/Home.module.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -35,6 +36,27 @@ export default function Home() {
     </div>
   ) : (
     <div>
+      <Head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        {/* <!-- The above 3 meta tags *must* come first in the head --> */}
+
+        {/* <!-- SITE TITLE --> */}
+        <title>ISTE NIT DURGAPUR</title>
+        <meta
+          name="description"
+          content="ISTE NIT Durgapur took birth on the auspicious occasion of Saraswati Puja Day way back in February, 1995 in our erstwhile called REC Durgapur and is the Oldest Student Chapter of Eastern India. "
+        />
+        <meta
+          name="keywords"
+          content="ISTE,NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR,NIT Durgapur clubs,NIT Durgapur Society,ISTE Students' Chapter"
+        />
+        <meta name="author" content="Abhishek Krishna@istenitdgp" />
+      </Head>
       <Header items={navigation} navPosition="right" home={true} />
       <section className={s.hero}>
         <div className={s.heroImageContainer}></div>
@@ -123,7 +145,7 @@ export default function Home() {
             {sponsers.map((data) => {
               return (
                 <div key={data.id}>
-                  <img src={data.Image}  alt="image" />
+                  <img src={data.Image} alt="image" />
                 </div>
               );
             })}
