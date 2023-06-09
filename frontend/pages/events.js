@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import s from "../styles/Events.module.scss";
 import Header from "../components/Header";
-import Tiltle from "../components/Title";
+import Title from "../components/Title";
 import navigation from "../data";
 import Footer from "../components/Footer";
 import EventCard from "../components/EventsCard";
@@ -72,7 +72,7 @@ const Events = ({ ...otherProps }) => {
       <div>
         <Header items={navigation} navPosition="right" home={false} />
 
-        <Tiltle title="OUR EVENTS" font="45" margin="75" />
+        <Title title="OUR EVENTS" font="45" margin="75" />
         <div className={s.wrapper}>
           {events.map((event) => {
             return (

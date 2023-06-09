@@ -1,0 +1,59 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+
+.gallery_image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery_image:hover {
+	transform: scale(1.1);
+}
+
+
+/* overlay */
+
+
+.image_container {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .image_caption {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+  }
+  
+  .image_container:hover .image_caption {
+	visibility: visible;
+	opacity: 1;
+  }
+  
+  .image_name,
+  .image_date {
+	display: block;
+	padding: 5px;
+	font-size: 14px;
+  }
+  
+  .image_name {
+	font-weight: bold;
+  }
+  
+  .image_date {
+	font-style: italic;
+  }
+  

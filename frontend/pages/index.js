@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import navigation from "../data";
 import Carousels from "../components/Carousel/Carousels";
-import Tiltle from "../components/Title";
+import Title from "../components/Title";
 import Loader from "../components/loader/Loader";
 
 import apiLinks from "../data/apiLink";
@@ -63,7 +63,7 @@ export default function Home() {
       </section>
       <div className={s.container}>
         <section className={s.about}>
-          <Tiltle title="ABOUT US" font="36" margin="30" />
+          <Title title="ABOUT US" font="36" margin="30" />
           <p>
             The Indian Society for Technical Education(ISTE) is the leading
             National Professional non-profit making Society for the Technical
@@ -87,14 +87,14 @@ export default function Home() {
           </p>
         </section>
         <section className={s.gallery}>
-          <Tiltle title="PHOTO GALLERY" font="36" margin="45" />
+          <Title title="PHOTO GALLERY" font="36" margin="45" />
           <div className={s.Carousel}>
-            <Carousels images={data} />
+            <Carousels images={data.slice(0,5)} />
           </div>
         </section>
 
         <section className={s.faculty}>
-          <Tiltle title="FACULTY ADVISORS" font="34" margin="30" />
+          <Title title="FACULTY ADVISORS" font="34" margin="30" />
           <div className={s.wrapper}>
             <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
@@ -140,7 +140,7 @@ export default function Home() {
         </section>
 
         <section className={s.sponsers}>
-          <Tiltle title="OUR SPONSERS" font="36" margin="60" />
+          <Title title="OUR SPONSERS" font="36" margin="60" />
           <div className={s.slider}>
             {sponsers.map((data) => {
               return (

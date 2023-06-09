@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import navigation from "../data";
 import Footer from "../components/Footer";
 import Loader from "../components/loader/Loader";
-import Tiltle from "../components/Title";
+import Title from "../components/Title";
 
 import contactDetails from "../data/contact";
 import apiLinks from "../data/apiLink";
@@ -96,7 +96,7 @@ const Contact = () => {
         data-aos="fade-up"
         id="contact"
       >
-        <Tiltle title="CONTACT US" font="36" margin="15" />
+        <Title title="CONTACT US" font="36" margin="15" />
         <div className="container p-6 rounded-2xl ">
           <div className="flex flex-col lg:flex-row lg:items-center text-slate-900 dark:text-gray-200 lg:justify-between -mx-4">
             <div
@@ -143,13 +143,13 @@ const Contact = () => {
                   </p>
                 </div>
                 <p className="text-base  font-normal text-body-color leading-relaxed  ">
-                  Harshit Surana :
+                  Abhishek Krishna :
                   <span className="font-normal text-[#0076fe] italic">
                     {contactDetails.mobile.chairperson}
                   </span>
                 </p>
                 <p className="text-base  font-normal leading-relaxed  mb-9 ">
-                  Ritabrata Ganguly :
+                   Pratiti Pradhan :
                   <span className="font-normal text-[#0076fe] italic">
                     {contactDetails.mobile.viceChairperson}
                   </span>

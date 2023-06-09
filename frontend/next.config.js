@@ -5,7 +5,7 @@ const nextConfig = {
     domains: [
       "127.0.0.1",
       "13.127.85.83",
-      "backend.istenitdgp.com",
+      "testbackend.istenitdgp.com",
       "istenitdgp.pythonanywhere.com"
     ],
   },
