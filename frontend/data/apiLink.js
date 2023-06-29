@@ -1,6 +1,6 @@
-//const api = "https://backend.istenitdgp.com";
-//const api = "http://127.0.0.1:8000";
-const api = "https://testbackend.istenitdgp.com";
+// const api = "https://backend.istenitdgp.com";
+const api = "https://av1na5h.pythonanywhere.com/";
+// const api = "https://testbackend.istenitdgp.com";
 
 
 const apiLinks = {
