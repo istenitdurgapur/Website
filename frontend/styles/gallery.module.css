@@ -1,0 +1,51 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+
+.mainContainer{
+    margin-top: 7rem;
+}
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+    min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+		grid-gap: 2rem;
+	}
+    @media only screen and (max-width: 600px) {
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+            grid-gap: 2rem;
+        }
+    }
+
+	.gallery{
+		margin: 0;
+	}
+}

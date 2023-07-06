@@ -7,13 +7,13 @@
   position: relative;
 }
 .heroImageContainer {
-  background-image: url("/hero.jpg");
+  background-image: url("/hero.webp");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   @media screen and (max-width: 576px) {
-    background-image: url("/hero1.jpg");
+    background-image: url("/hero1.webp");
   }
 }
 .about {
