@@ -1,6 +1,6 @@
 // const api = "https://backend.istenitdgp.com";
 // const api = "https://backendistenitdgp.pythonanywhere.com";
-const api = "http://saikrishnagaddam.pythonanywhere.com/";
+const api = "https://saikrishnagaddam.pythonanywhere.com/";
 // const api = "https://testbackend.istenitdgp.com";
 
 
