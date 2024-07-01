@@ -117,11 +117,11 @@ export default function Home() {
             </div>
             <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
-                <img src="rowdra.png" alt="profile card" />
+                <img src="anirudha.jpg" alt="profile card" />
               </div>
               <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
                 <div className={s.profileCard__name}>
-                  Prof. Rowdra Ghatak <br />
+                  Prof. Aniruddha Bhattacharya <br />
                   <span className={s.profileCard__name__designation}>
                     {" "}
                     FACULTY ADVISOR{" "}

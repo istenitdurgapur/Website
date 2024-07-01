@@ -14,7 +14,7 @@ function Footer() {
             </h4>
             <ul className={s.ul1}>
               {/* <li>Made with 💖 by WEBD Team</li> */}
-              <li>© 2022 ISTE. All Rights Reserved. </li>
+              <li>© 2024 ISTE. All Rights Reserved. </li>
             </ul>
           </div>
           <div className={s.footerCol}>
