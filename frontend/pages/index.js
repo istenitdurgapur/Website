@@ -89,7 +89,7 @@ export default function Home() {
         <section className={s.gallery}>
           <Title title="PHOTO GALLERY" font="36" margin="45" />
           <div className={s.Carousel}>
-            <Carousels images={data.slice(0,5)} />
+            <Carousels images={data.slice(0, 5)} />
           </div>
         </section>
 
@@ -102,10 +102,11 @@ export default function Home() {
               </div>
               <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
                 <div className={s.profileCard__name}>
-                  Dr. Anita Pal <br />{" "}
+                  Dr. Sabyasachi Biswas
+                  <br />{" "}
                   <span className={s.profileCard__name__designation}>
                     {" "}
-                    CHIEF-FACULTY ADVISOR{" "}
+                    FACULTY ADVISOR{" "}
                   </span>
                 </div>
                 <div className={s.profileCard__txt}>
@@ -117,11 +118,11 @@ export default function Home() {
             </div>
             <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
-                <img src="anirudha.jpg" alt="profile card" />
+                <img src="fa1.jpg" alt="profile card" />
               </div>
               <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
                 <div className={s.profileCard__name}>
-                  Prof. Aniruddha Bhattacharya <br />
+                  Dr. Nilanjan Biswas <br />
                   <span className={s.profileCard__name__designation}>
                     {" "}
                     FACULTY ADVISOR{" "}
