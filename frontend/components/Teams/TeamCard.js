@@ -1,15 +1,15 @@
 import React from "react";
 import Image from "next/image";
 
-function TeamCard({d}) {
+function TeamCard({ d }) {
   return (
-    <div className=" h-[425px]  w-[250px] bg-white  transition-all duration-500 hover:scale-110 drop-shadow-md hover:drop-shadow-xl  rounded-xl  m-6 group">
+    <div className=" h-[450px]  w-[250px] bg-white  transition-all duration-500 hover:scale-110 drop-shadow-md hover:drop-shadow-xl  rounded-xl  m-6 group">
       <Image
         className="rounded-t-2xl"
         src={d.image}
         layout="responsive"
         height={290}
-        width={250}
+        width={240}
         objectFit="cover"
         objectPosition="top"
         alt="image"
