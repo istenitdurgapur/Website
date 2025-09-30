@@ -14,7 +14,7 @@ function Footer() {
             </h4>
             <ul className={s.ul1}>
               {/* <li>Made with 💖 by WEBD Team</li> */}
-              <li>© 2024 ISTE. All Rights Reserved. </li>
+              <li>© 2025 ISTE. All Rights Reserved. </li>
             </ul>
           </div>
           <div className={s.footerCol}>
@@ -28,7 +28,10 @@ function Footer() {
                 >
                   <path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z" />
                 </svg>
-                <a href="https://goo.gl/maps/pLPbYVaBqDfMKEkf8"> {contactDetails.location} </a>
+                <a href="https://goo.gl/maps/pLPbYVaBqDfMKEkf8">
+                  {" "}
+                  {contactDetails.location}{" "}
+                </a>
               </li>
               <li className="flex items-center">
                 <svg
@@ -48,7 +51,10 @@ function Footer() {
                 >
                   <path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z" />
                 </svg>
-                <a href={`mailto:${contactDetails.email}`}> {contactDetails.email} </a>
+                <a href={`mailto:${contactDetails.email}`}>
+                  {" "}
+                  {contactDetails.email}{" "}
+                </a>
               </li>
             </ul>
           </div>
