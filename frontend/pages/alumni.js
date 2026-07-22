@@ -87,10 +87,15 @@ function Alumni() {
         </Link>
       </div>
 
+      <AlumniSection alumni={alumni} year={2035} />
+      <AlumniSection alumni={alumni} year={2034} />
+      <AlumniSection alumni={alumni} year={2033} />
+      <AlumniSection alumni={alumni} year={2032} />
+      <AlumniSection alumni={alumni} year={2031} />
+      <AlumniSection alumni={alumni} year={2030} />
       <AlumniSection alumni={alumni} year={2029} />
       <AlumniSection alumni={alumni} year={2028} />
       <AlumniSection alumni={alumni} year={2027} />
-      <AlumniSection alumni={alumni} year={2026} />
       <AlumniSection alumni={alumni} year={2026} />
       <AlumniSection alumni={alumni} year={2025} />
       <AlumniSection alumni={alumni} year={2024} />

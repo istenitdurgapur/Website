@@ -98,14 +98,14 @@ export default function Home() {
           <div className={s.wrapper}>
             <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
-                <img src="/fa2.png" alt="profile card" />
+                <img src="/Sabyasachi.jpg" alt="profile card" />
               </div>
               <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
                 <div className={s.profileCard__name}>
-                  Dr. Anita Pal <br />{" "}
+                  Dr. Sabyasachi Biswas <br />{" "}
                   <span className={s.profileCard__name__designation}>
                     {" "}
-                    CHIEF-FACULTY ADVISOR{" "}
+                    FACULTY ADVISOR{" "}
                   </span>
                 </div>
                 <div className={s.profileCard__txt}>
@@ -115,7 +115,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className={`${s.profileCard}`}>
+
+            {/* <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
                 <img src="anirudha.jpg" alt="profile card" />
               </div>
@@ -128,14 +129,15 @@ export default function Home() {
                   </span>
                 </div>
                 <div className={s.profileCard__txt}>
-                  {/* Nothing in this world can take the place of persistence.
+                  Nothing in this world can take the place of persistence.
                   Talent will not: nothing is more common than unsuccessful men
                   with talent. Genius will not; unrewarded genius is almost a
                   proverb. Education will not: the world is full of educated
-                  derelicts. Persistence and determination alone are omnipotent. */}
+                  derelicts. Persistence and determination alone are omnipotent.
                 </div>
               </div>
-            </div>
+            </div> */}
+
           </div>
         </section>
 
