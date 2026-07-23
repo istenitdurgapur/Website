@@ -87,6 +87,7 @@ function Alumni() {
         </Link>
       </div>
 
+      <AlumniSection alumni={alumni} year={2035} />
       <AlumniSection alumni={alumni} year={2034} />
       <AlumniSection alumni={alumni} year={2033} />
       <AlumniSection alumni={alumni} year={2032} />
