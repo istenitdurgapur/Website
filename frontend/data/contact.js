@@ -1,8 +1,8 @@
 const contactDetails = {
     location : "NIT Durgapur",
     mobile : {
-        chairperson : "+91 7979701226",
-        viceChairperson : "+91 8076085724"
+        chairperson : "+91 9508409208",
+        viceChairperson : "+91 7061692005"
     },
     email : "istenitdurgapur@gmail.com",
     socialMediaLinks: {
