@@ -135,7 +135,6 @@ export default function Home() {
       </div>
     </div>
   
-```
 
             {/* <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
