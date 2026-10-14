@@ -93,7 +93,6 @@ export default function Home() {
           </div>
         </section>
 
-       ```jsx
 <section className={s.faculty}>
   <Title title="FACULTY ADVISORS" font="34" margin="30" />
 
@@ -121,7 +120,7 @@ export default function Home() {
 
     <div className={s.profileCard}>
       <div className={s.profileCard__img}>
-        <img src="/Sanjibsadhu.jpg" alt="Dr. Sanjib Sadhu" />
+        <img src="/Sanjibsadhu.jpg" alt="Dr. Sanjib Sadhucd" />
       </div>
 
       <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
