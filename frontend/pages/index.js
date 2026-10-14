@@ -93,28 +93,50 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={s.faculty}>
-          <Title title="FACULTY ADVISORS" font="34" margin="30" />
-          <div className={s.wrapper}>
-            <div className={`${s.profileCard}`}>
-              <div className={s.profileCard__img}>
-                <img src="/Sabyasachi.jpg" alt="profile card" />
-              </div>
-              <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
-                <div className={s.profileCard__name}>
-                  Dr. Sabyasachi Biswas <br />{" "}
-                  <span className={s.profileCard__name__designation}>
-                    {" "}
-                    FACULTY ADVISOR{" "}
-                  </span>
-                </div>
-                <div className={s.profileCard__txt}>
-                  {/* Get abuzz and shroud yourself with knowledge to extinguish
-                  moribundity,as knowledge is a wing with which one can fly to
-                  the heaven. */}
-                </div>
-              </div>
-            </div>
+       ```jsx
+<section className={s.faculty}>
+  <Title title="FACULTY ADVISORS" font="34" margin="30" />
+
+  <div className={s.wrapper}>
+    <div className={`${s.profileCard}`}>
+      <div className={s.profileCard__img}>
+        <img src="/ArghyaChatterjee.jpg" alt="Dr. Arghya Chatterjee" />
+      </div>
+
+      <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
+        <div className={s.profileCard__name}>
+          Dr. Arghya Chatterjee<br />{" "}
+          <span className={s.profileCard__name__designation}>
+            FACULTY ADVISOR
+          </span>
+        </div>
+
+        <div className={s.profileCard__txt}>
+          {/* Get abuzz and shroud yourself with knowledge to extinguish
+          moribundity,as knowledge is a wing with which one can fly to
+          the heaven. */}
+        </div>
+      </div>
+    </div>
+
+    <div className={s.profileCard}>
+      <div className={s.profileCard__img}>
+        <img src="/Sanjibsadhu.jpg" alt="Dr. Sanjib Sadhu" />
+      </div>
+
+      <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
+        <div className={s.profileCard__name}>
+          Dr. Sanjib Sadhu<br />{" "}
+          <span className={s.profileCard__name__designation}>
+            FACULTY ADVISOR
+          </span>
+        </div>
+
+        <div className={s.profileCard__txt}></div>
+      </div>
+    </div>
+  
+```
 
             {/* <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
